@@ -1,0 +1,36 @@
+
+Basic code:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!(1)"<< endl;
+    cout << "Hello world!(2)\n";
+    cout << "Hello world!(3)\n";
+    cout<<8<<" ";
+    cout<<9<<"\n";
+    cout << "Hello world!(4)\n";
+    cout<<56<<" "<<6<<endl;
+    return 0;
+}
+
+Output-->
+Hello world!(1)
+Hello world!(2)
+Hello world!(3)
+8 9
+Hello world!(4)
+56 6
+
+Input/Output:
+In--> cin >> .. ..
+Out--> cout<< .. ..
+
+EOF(For integer):
+unsigned long int x;
+while(cin >> x)
+{
+    ... ...
+}
