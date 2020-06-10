@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+class RowColum
+{
+	public:
+	int r = 0;
+	int c = 0;
+};
+int main()
+{
+    RowColum rc[6];
+    rc[1].c = 5;
+    rc[2].r = 55;
+    cout<<rc[1].c<<" "<<rc[5].r<<endl;
+    rc[5].r = -8;
+    cout<<rc[1].c<<" "<<rc[5].r<<endl;
+    return 0;
+}
