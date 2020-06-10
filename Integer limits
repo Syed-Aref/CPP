@@ -1,0 +1,23 @@
+numeric_limits<short>::min() ---> returns minimum value of short data type()
+numeric_limits<short>::max() ---> returns maximum value of short data type()
+
+Similarly:
+numeric_limits<data type>::min/max() ---> returns minimum/maximum value of that data type()
+
+
+short : -32768 to 32767
+unsigned short : 0 to 65535
+int : -2147483648 to 2147483647
+unsigned int : 0 to 4294967295
+long int: --9223372036854775808 to 9223372036854775807
+unsigned long int: 0 to 18446744073709551615
+long long int: -9223372036854775808 to 9223372036854775807
+unsigned long long int: 0 to 18446744073709551615
+float : 1.17549e-038 to 3.40282e+038
+double : 2.22507e-308 to 1.79769e+308
+long double : 3.3621e-4932 to 1.18973e+4932
+
+Short=16 bit
+int=32 bit
+long=64 bit
+long long = 64 bit
