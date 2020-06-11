@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+
+using namespace std ;
+int main()
+{
+    ios_base::sync_with_stdio(false) ;
+    cin.tie(NULL) ;
+    const int m = 10;
+    bitset<m> bs;
+    //// bset.set(pos, b)//
+    bs.set(2,1);
+    bs.set(8,1);
+    //can also be set as bs[i]=b//
+    bs[6] = 1;
+    for(int i = 0;i<=m-1;i++)
+        cout<<bs[i]<<"\n";
+    return 0;
+}
