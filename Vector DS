@@ -31,3 +31,31 @@ vector::emplace_back()
 vector::emplace()
 vector::max_size()
 vector::insert()
+
+
+Basic vector code and output:
+Code->
+#include <bits/stdc++.h>
+#include <vector>
+#include <iterator> 
+using std::cin;
+using std::cout;
+using std::vector;
+int main()
+{
+ vector<long int> vec(11,8);
+ for(int i = 0;i<=vec.size()-1;i++)
+    cout<<"Inedx "<<i<<" : "<<vec[i]<<"\n";
+} 
+Output->
+Inedx 0 : 8                                                                                                                                   
+Inedx 1 : 8                                                                                                                                   
+Inedx 2 : 8                                                                                                                                   
+Inedx 3 : 8
+Inedx 4 : 8                                                                                                                                   
+Inedx 5 : 8                                                                                                                                   
+Inedx 6 : 8                                                                                                                                   
+Inedx 7 : 8                                                                                                                                   
+Inedx 8 : 8                                                                                                                                   
+Inedx 9 : 8                                                                                                                                   
+Inedx 10 : 8  
