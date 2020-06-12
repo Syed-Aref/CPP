@@ -22,3 +22,26 @@ int main()
 OUTPUT:
 67
 90
+
+Also,
+#include <bits/stdc++.h>
+#include <set> 
+#include <iterator> 
+using std::set;
+using std::iterator;
+using std::cin;
+using std::cout;
+
+int main()
+{ 
+    set<int> st;
+    //insert//
+    st.insert(90);
+    st.insert(67);
+    //traverse//
+    for (auto elem : st) 
+    { 
+        cout<<elem<<"\n";
+    } 
+    return 0;
+} 
