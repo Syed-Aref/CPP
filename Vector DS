@@ -14,7 +14,7 @@ vector::at()
 vector::back()
 vector::capacity()
 vector::clear()
-vector::push_back()
+vector::push_back()//adds as last element of list//
 vector::pop_back()
 vector::empty()
 vector::erase()
