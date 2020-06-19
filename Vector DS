@@ -32,7 +32,7 @@ vector::emplace()
 vector::max_size()
 vector::insert()
 
-
+<----------------------------------->
 Basic vector code and output:
 Code->
 #include <bits/stdc++.h>
@@ -59,3 +59,18 @@ Inedx 7 : 8
 Inedx 8 : 8                                                                                                                                   
 Inedx 9 : 8                                                                                                                                   
 Inedx 10 : 8  
+
+<----------------------------------->
+
+# insert at front: vec.insert(vec.begin(),element);
+
+# nullify: vec.lear();
+
+# gettinf element from certain index : vec.at(i),vec[i];
+
+
+
+
+
+
+
