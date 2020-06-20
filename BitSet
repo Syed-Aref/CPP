@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
-
-using namespace std ;
+#include <iostream>
+#include <bitset>
+using std::cout;
+using std::cin;
+using std::bitset;
 int main()
 {
-    ios_base::sync_with_stdio(false) ;
-    cin.tie(NULL) ;
     const int m = 10;
     bitset<m> bs;
     //// bset.set(pos, b)//
