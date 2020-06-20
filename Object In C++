@@ -1,6 +1,6 @@
 #include <iostream>
+using std::cout;
 
-using namespace std;
 class RowColum
 {
 	public:
