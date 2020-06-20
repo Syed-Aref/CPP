@@ -1,39 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <set> 
 #include <iterator> 
-using namespace std ;
-
-int main()
-{
-    ios_base::sync_with_stdio(false) ;
-    cin.tie(NULL) ;
-    set<int> st;
-    //insert//
-    st.insert(90);
-    st.insert(67);
-    //traverse//
-    for (auto elem : st) 
-    { 
-        cout<<elem<<"\n";
-    } 
-    return 0;
-} 
-
-OUTPUT:
-67
-90
-
-Also,
-#include <bits/stdc++.h>
-#include <set> 
-#include <iterator> 
-using std::set;
-using std::iterator;
 using std::cin;
 using std::cout;
-
+using std::set;
+using std::iterator;
 int main()
-{ 
+{
+ 
     set<int> st;
     //insert//
     st.insert(90);
