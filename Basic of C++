@@ -1,22 +1,22 @@
 
 Basic code:
+
 #include <iostream>
-
-using namespace std;
-
+using std::cout;
 int main()
 {
-    cout << "Hello world!(1)"<< endl;
+    cout << "Hello world!(1)"<< "\n";
     cout << "Hello world!(2)\n";
     cout << "Hello world!(3)\n";
     cout<<8<<" ";
     cout<<9<<"\n";
     cout << "Hello world!(4)\n";
-    cout<<56<<" "<<6<<endl;
+    cout<<56<<" "<<6<<"\n";
     return 0;
 }
 
-Output-->
+
+Output:
 Hello world!(1)
 Hello world!(2)
 Hello world!(3)
