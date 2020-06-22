@@ -77,3 +77,56 @@ int main()
 Inside console:
 The godfather is written by Mario Pujo
 */
+
+
+-------------------------------------***-------------------------------------
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Book
+{
+    private:
+        int rating;  
+    public:
+        string author;
+        string bookName;
+        Book(string aAuthor,string aBookName,int num)
+        {
+          author = aAuthor;
+          bookName = aBookName;
+          rating = num;
+        }
+        int getRating()
+        {
+          return rating;
+        }
+        void setRating(int n)
+        {
+          rating = n;
+        }
+};
+int main()
+{
+    Book book1("Mario Pujo","The godfather",8);
+    cout<<book1.bookName<<" is written by "<<book1.author<<endl;
+    //cout<<"Rating is: "<<book1.rating<<"\n";-->Error,can not access private field in any other class except the main body class//
+    cout<<"Rating is: "<<book1.getRating()<<"\n";
+    //Changing the information about book//
+    book1.bookName = "Lilaboti";
+    book1.author = "Humayun Ahmed";
+    //book1.rating = 9;-->Error
+    book1.setRating(9);
+    cout<<"New Book"<<"\n";
+    cout<<book1.bookName<<" is written by "<<book1.author<<endl;
+    cout<<"Rating is: "<<book1.getRating()<<"\n";
+    return 0;
+}
+/*Inside console:
+The godfather is written by Mario Pujo
+Rating is: 8
+New Book
+Lilaboti is written by Humayun Ahmed
+Rating is: 9
+*/
