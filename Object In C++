@@ -1,19 +1,79 @@
 #include <iostream>
-using std::cout;
 
+using std::cout;
 class RowColum
 {
-	public:
-	int r = 0;
-	int c = 0;
+    public:
+        int r = 0;
+        int c = 0;
 };
 int main()
 {
+    //Intializing a single object//
+    RowColum rc1;
+    cout<<rc1.r<<"\n";// Output: 0 //
+    
+    //Initializing through array
     RowColum rc[6];
     rc[1].c = 5;
     rc[2].r = 55;
-    cout<<rc[1].c<<" "<<rc[5].r<<endl;
+    cout<<rc[1].c<<" "<<rc[5].r<<"\n";
     rc[5].r = -8;
-    cout<<rc[1].c<<" "<<rc[5].r<<endl;
+    cout<<rc[1].c<<" "<<rc[5].r<<"\n";
     return 0;
 }
+
+-------------------------------------***-------------------------------------
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Book
+{
+    public:
+        string author;
+        string bookName;
+        Book()
+        {
+          cout<<"Please intitalize Author and Book-name"<<"\n";
+        }
+};
+int main()
+{
+    Book book1;
+    return 0;
+}
+
+/*
+Inside console:
+Please intitalize Author and Book-name
+*/
+
+-------------------------------------***-------------------------------------
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Book
+{
+    public:
+        string author;
+        string bookName;
+        Book(string aAuthor,string aBookName)
+        {
+          author = aAuthor;
+          bookName = aBookName;
+        }
+};
+int main()
+{
+    Book book1("Mario Pujo","The godfather");
+    cout<<book1.bookName<<" is written by "<<book1.author<<endl;
+    return 0;
+}
+
+/*
+Inside console:
+The godfather is written by Mario Pujo
+*/
