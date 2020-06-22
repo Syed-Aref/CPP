@@ -51,3 +51,14 @@ cout<<"\n";
 delete [] a;  // When done, free memory pointed to by a.
 a = NULL;      
 }
+
+-->Dynamic Array:
+//int dynArr[row][col]
+int dynArr[5][3] = {
+  //            COLUMNS:  Col:1(0)  Col:2(1)   Col:3(2)            ROWS:   //   
+                        {       12,       19,        9},          //Row no:1(0)
+                        {        2,       22,       -2},          //Row no:2(1)
+                        {       56,       89,        0},          //Row no:3(2)
+                        {       47,       89,       67},          //Row no:4(3)
+                        {       10,       30,       50}           //Row no:5(4)
+                      };  
