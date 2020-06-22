@@ -35,7 +35,7 @@ bitset<m+1> bitPrime;
 ..........**..........
 
 Exemple of memory efficient bitset
-Q:Odd/even check
+Q:Prime/non-prime check
 
 
 
@@ -48,6 +48,7 @@ bitset<m+1> bitPrime;
 int count ;//= 0;
 void sieve(int n)
 {
+    //For prime '0'.For non-prime '1'//
     bitPrime[0] = bitPrime[1] = 1;
     count = 0;
     if(n==1)
