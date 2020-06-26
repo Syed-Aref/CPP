@@ -1,5 +1,5 @@
 vector<unsigned long int> vec;
-vec.push_back(2);[As list.add]
+vec.push_back(2);[Adds as a last elemnt]
 vec.push_back(89);
 
 
@@ -10,11 +10,8 @@ vector rbegin() and rend()
 vector::cbegin() and vector::cend()
 vector::crend() and vector::crbegin()
 vector::assign()
-vector::at()
 vector::back()
 vector::capacity()
-vector::clear()
-vector::push_back()//adds as last element of list//
 vector::pop_back()
 vector::empty()
 vector::erase()
@@ -64,9 +61,10 @@ Inedx 10 : 8
 
 # insert at front: vec.insert(vec.begin(),element);
 
-# nullify: vec.lear();
+# nullify: vec.clear();
 
 # gettinf element from certain index : vec.at(i),vec[i];
+# vec.push_back(2);[Adds as a last elemnt]
 
 
 
