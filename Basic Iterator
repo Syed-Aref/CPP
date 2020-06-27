@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+#include <iterator>
+using namespace std;
+int main()
+{
+    vector<int> ar = { 1, 2, 3, 4, 5 };
+    vector<int>::iterator ptr1;
+    ptr1 = ar.begin();
+
+    
+
+
+    cout << "First element is : " << *ptr1 << "\n";
+
+    vector<int>::iterator ptr2;
+    ptr2 = ar.end();
+    //cout << "last element is : " << *ptr2 << "\n"; --> Wrong statement
+}
+
+Output:
+First element is : 1
