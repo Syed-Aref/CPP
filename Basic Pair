@@ -1,0 +1,17 @@
+using namespace std;
+
+int main()
+{
+    std::pair<int, int> p(10, 20);
+
+    std::pair<char, int> p1 = std::make_pair('a', 1);
+
+    cout << p.first << "\n";
+    cout << p.second<< "\n";
+
+    cout << "\n";
+
+    p1.first = 'c';
+    cout << p1.first << "\n";
+    cout << p1.second << "\n";
+}
