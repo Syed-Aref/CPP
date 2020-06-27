@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+    int a = 34;
+    int* pA = &a;
+    cout << "Value : " << a << " Memory : " << pA<<"\n";
+    
+    double d = 69.69;
+    double* pD = &d;
+    cout << "Value : " << d << " Memory : " << pD << "\n";
+
+    //De-referencing
+    cout << "a = "<<*pA<<"\n";
+    cout << "d = " << *pD << "\n";
+
+}
+Output:
+Value : 34 Memory : 0135FAEC
+Value : 69.69 Memory : 0135FAD0
+a = 34
+d = 69.69
