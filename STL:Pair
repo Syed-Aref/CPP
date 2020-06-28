@@ -11,7 +11,7 @@ int main()
 
     cout << "\n";
 
-    p1.first = 'c';
+    p1.first = 'c';  // changing p1.first = 'a' to 'c'
     cout << p1.first << "\n";
     cout << p1.second << "\n";
 }
