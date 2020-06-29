@@ -1,0 +1,28 @@
+#include <iostream>
+#include <set>
+#include <algorithm>
+#include <iterator>
+using namespace std;
+int main()
+{
+  set<int> st;
+    //insert//
+    st.insert(90);
+    st.insert(67);
+    st.insert(78);
+    st.insert(100);
+    auto it  = st.find(78); //return type: iterator
+    //if element is present it!=set.end();
+    if( it!=st.end() )
+      cout << *it <<"\n";
+    /*
+
+      set do not have indexing system as it - set.begin() = index
+
+    */  
+     auto it1 = st.lower_bound(77);
+    if( it1!=st.end() )
+      cout << *it1 <<"\n"; 
+  // Since set is always sorted there is no need of set.begin(),//set.end() parameter.same for upper bound
+
+}    
