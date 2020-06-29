@@ -1,0 +1,19 @@
+#include <iostream>
+#include<map>
+#include <algorithm>
+#include <iterator>
+using namespace std;
+int main()
+{
+  map<int,int> M;
+  M[1] = 10;
+  M[2] = 13;
+  M[3] = 23;
+
+  for(auto i : M)
+  {
+    cout<<"key : "<<i.first<<" value : "<<i.second<<"\n";
+  }
+  M[3]+=2; //M[3] = 25
+  cout<<M[3]<<"\n";
+}  
