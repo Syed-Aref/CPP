@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+class RowColum
+{
+    public:
+        int r = 0;
+        int c = 0;
+        RowColum(int R,int C)
+        {
+          r = R;
+          c = C;
+        }
+};
+int main() {
+  vector <RowColum> vrc;
+  vrc.push_back( RowColum(9,89) );
+  
+  cout<< vrc[0].c <<"\n";
+  
+
+}
