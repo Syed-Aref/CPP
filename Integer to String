@@ -1,0 +1,22 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    
+    int a = 12;
+    ostringstream str1; 
+    str1 << a;
+    string sa = str1.str();
+    cout << sa <<"\n";
+    int b = 20;
+    
+    ostringstream str2; 
+    str2 << b;
+    string sb = str2.str();
+    cout << sb <<"\n";
+    return 0;
+}
