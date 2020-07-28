@@ -22,3 +22,25 @@ Value : 34 Memory : 0135FAEC
 Value : 69.69 Memory : 0135FAD0
 a = 34
 d = 69.69
+-----------------------------------
+#CONFUSION:
+int x = 90;
+int* pX = &x;
+int y = 35;
+int* pY = &y;
+
+WHEN:
+pX = pY;
+// pX's new value is pY
+// *pX = y
+// &x != pX
+// but x!=y
+// &x != &y
+WHEN:
+x = y;
+// *pX = y
+// But &x = pX
+//pX != pY
+// &x != &y
+
+
