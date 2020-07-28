@@ -5,30 +5,33 @@ using namespace std;
 int main()
 {
     vector<int> ar = { 11, 23, 43, 48, 5, 12, 29 };
-    vector<int>::iterator ptr1;
-    ptr1 = ar.begin();
-
+    vector<int>::iterator ptr1,ptr2;
     
-
-
+    ptr1 = ar.begin();
     cout << "First element is : " << *ptr1 << "\n";
-
+    // [cout << ptr1 << "\n";] will give error
     vector<int>::iterator ptr2;
+    
     ptr2 = ar.end();
-    //cout << "Last element is : " << *ptr2 << "\n"; --> Wrong statement
+    //[cout << "Last element is : " << *ptr2 << "\n";]  wrong statement
+    //[cout << ptr1 << "\n";] is also wrong statement
     
     //Last or any element using prev and next
-    //Last element
-    vector<int>::iterator ptrF;
-    ptrF = prev(ptr2, 1);
-    cout << "Last element is : " << *ptrF << "\n";
-    //prev(ptrr2,2) --> Last second element
+    #Last element
+    vector<int>::iterator ptrLast;
+    ptrLast = prev(ptr2, 1);
+    cout << "Last element is : " << *ptrLast << "\n";
+    
+    #Last second element
+    vector<int>::iterator ptrLast2 = prev(ptrr2,2);
 
-    //Second element of vector
+    #Second element of vector
     vector<int>::iterator ptr2nd;
     ptr2nd = next(ptr1, 1);
     cout << "Second element is : " << *ptr2nd << "\n";
-    //next(ptr1,2) --> third element
+    
+    #Third element
+    vector<int>::iterator ptrThird = next(ptr1,2);
 }
 
 
