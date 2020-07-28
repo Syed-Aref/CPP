@@ -5,6 +5,13 @@ using namespace std;
 int main()
 {
     vector<int> ar = { 11, 23, 43, 48, 5, 12, 29 };
+    ar.push_back(11);
+    ar.push_back(23);
+    ar.push_back(43);
+    ar.push_back(48);
+    ar.push_back(5);
+    ar.push_back(12);
+    ar.push_back(29);
     vector<int>::iterator ptr1,ptr2;
     
     ptr1 = ar.begin();
