@@ -22,7 +22,9 @@ Pointer/iterator
   // returns null iterator(null pointer) to v[n].
   //Since,v[n] is null it cannot be accesed as *it = vec[n]
   // [cout << it <<"\n";] & [cout << *it <<"\n";] will cause error
-
+4.inserting by iterator
+//vec.insert(iterator_var,element);
+vec.insert(vec.begin(),element); // inserting at first position
 ------------------------------------------------------------------------------
 Accessing,adding,deletinhg
 1.cout << vec.back() <<"\n"; // vec.back() = vec[n-1]
@@ -30,8 +32,7 @@ Accessing,adding,deletinhg
 3.vec.pop_back(); // Void function.Deletes last element
 4.vec[2]; //accessing 2nd element(0 based indexing)
 5.vec.at(2); //accessing 2nd element(0 based indexing)
-
-
+6.vec.clear(); //nullification of vector vec
 <----------------------------------->
 Basic vector code and output:
 Code->
@@ -62,17 +63,11 @@ Inedx 10 : 8
 
 <----------------------------------->
 
-# insert at front: vec.insert(vec.begin(),element);
-
-# nullify: vec.clear();
-
-# gettinf element from certain index : vec.at(i),vec[i];
-# vec.push_back(2);[Adds as a last elemnt]
 #General traversing:
-  vector<int> ar = { 11, 23, 43, 48, 5, 12, 29 };
-      for(int x : ar)
-        cout<<x<<"\n";
-      cout<<"\n"; 
+vector<int> ar = { 11, 23, 43, 48, 5, 12, 29 };
+for(int x : ar)
+    cout<<x<<"\n";
+cout<<"\n"; 
 
 
 
