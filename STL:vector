@@ -33,6 +33,8 @@ Accessing,adding,deletinhg
 4.vec[2]; //accessing 2nd element(0 based indexing)
 5.vec.at(2); //accessing 2nd element(0 based indexing)
 6.vec.clear(); //nullification of vector vec
+7.vec.erase(v.begin()+4); //erases the fifth element of the vector v
+8.v.erase(v.begin()+2,v.begin()+5); //erases all the elements from the third element to the fifth element
 <----------------------------------->
 Basic vector code and output:
 Code->
