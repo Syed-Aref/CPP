@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class NUM3
+{
+	public :
+		int n1;
+		int n2;
+		int n3;
+		NUM3(int a,int b,int c)
+		{
+			n1 = a;
+			n2 = b;
+			n3 = c;
+		}
+		/*
+		NUM3()
+		{
+			
+		}
+		*/
+	
+		
+};
+int main()
+{
+    //(1)
+	NUM3 N1(12,24,48);
+	
+    //(2)
+	NUM3* N2 = new NUM3(10,2,8);
+	
+	//(3)
+    NUM3 *N3[4];
+    N3[0] = new NUM3(1,2,4);
+    N3[1] = new NUM3(1,2,4);
+    // *N3[1] = new NUM3(1,2,4); --> Error
+    
+    //OBSERVATION : STARS ARE USED FOR ARRAY CLASS 
+    return 0;
+}
