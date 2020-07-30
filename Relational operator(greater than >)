@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class num3
+{
+	private:
+		int a,b,c;
+	public:
+		num3(int n1,int n2,int n3)
+		{
+			a = n1;
+			b = n2;
+			c = n3;
+			
+		}
+		    int operator >(num3& n) // int operator >(num3 n) --> also correct statement
+			{
+				if( (a>n.a) || (b>n.b) || (c>n.c) ) 
+					return 1;
+				else
+					return 0;	
+			}
+	
+};
+int main() 
+{
+	num3 n1(10,4,19);
+	num3 n2(20,13,56);
+	cout << (n1>n2) << "\n";
+	/* 
+		n1          >  n2
+		main(a,b,c) >  (n2.a,n2.b,n2.c)
+		Implicit    >  Explicit
+		
+		in class
+		operator n1 > n2
+		
+	*/
+}
