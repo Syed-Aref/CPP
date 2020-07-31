@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <vector>
 #include <iterator>
@@ -15,23 +17,45 @@ int main()
     cout << it1 - v.begin() << "\n";
     cout << it3 - v.begin()  << "\n";
      /*
-     In CPP iterator - vector.begin() gives the index position at the vector(0 based)
+     In CPP iterator - vector.begin() gives the memory position/adress at the 0-th element of vector
      
-     *iterator gives value at index iterator - vector.begin()
+     *iterator gives value at memory position/adress 
 
-     If value is greater then it's index will be n(vector.size())
-     If index is n, *iterator will crash
+     Lower bound works as this >= sign:
+     1)If target value is present in sorted vector it points iterator to that value(If there are 
+     multiple target values it will point iterator to that value memory of first occurance)
+     2)Else it will point out iterator to the memory of that first value which will be greater than target value.
+     3)If target value is greater than the last element it will point iterator to the next empty memory of last value
+     Ex:
+        0  1 2 3 4 5 6 7
+        3  5 5 5 5 7 8 9
+        If target is 7 it will point to the memory of index : 5
+        If target is 6 it will point to the memory of index : 5
+        If target is 5 it will point to the memory of index : 1
+        If target is 10 it will point to the memory of index : 8
+     (*)Iterator - v.begin gives index position of that number.
+     (*)If iterator points out to the next empty memory of last index of the array, *iterator will crash
      
      */
     std::vector<int>::iterator it4;
     it4 = std::upper_bound(v.begin(), v.end(), 30);
     cout << it4 - v.begin() << "\n";
     /*
-    The index and value technique is same as lower bound
 
-    lower bound - Target is 30.So it will point to the first value>=30
-    upper bound - Target is 30.So it will point to the first value>30
-    
+    Upper bound works as this > sign:
+    1)If target value is present in sorted vector it points iterator to that value(If there are are multiple target values it 
+    will point iterator to that value memory of first occurance)
+    2)It will point out iterator to the memory of that first value which will be greater than target value.(Even if target 
+    value is present one or multiple times)
+    3)If target value is greater than the last element it will point iterator to the next empty memory of last value
+    Ex:
+       0  1 2 3 4 5 6 7
+       3  5 5 5 5 7 9 9
+       If target is 7 it will point to the memory of index : 6
+       If target is 6 it will point to the memory of index : 5
+       If target is 5 it will point to the memory of index : 5
+       If target is 10 it will point to the memory of index : 8
+
     */
-
 }
+
