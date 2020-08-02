@@ -11,31 +11,50 @@ int main()
     M[1] = 10;
     M[2] = 13;
     M[3] = 23;
-    // Also, map mrthods can be used
+    // Also, map methods can be used
     M.insert( make_pair(7, 8) );
+    for (auto i : M)
+    {
+        cout << "key : " << i.first << " value : " << i.second << "\n";
+    }
+    cout << "------------------\n" << endl;
+
+
+
+    // Point 1 : Map is printed on ascending order of key value
+    M[4] = 40;
+    cout << "Point 1:" << endl;
     for (auto i : M)
     {
         cout << "key : " << i.first << " value : " << i.second << "\n";
     }
     cout << "\n" << endl;
 
-    // Point 1 : Map is printed on ascending order of key value
-    M[4] = 40;
+    // Point 2 : Changing/accessing values as array
+    M[3] += 2; //M[3] = 25
+    cout << "Point 2:" << endl;
+    cout << M[3] << "\n";
+    cout << "\n" << endl;
+
+    // Point 3 : Erasing
+    //M.erase(key);
+    M.erase(10); // Though 10 is not a key it will not cause error
+    M.erase(3);
+    cout << "Point 3:" << endl;
     for (auto i : M)
     {
         cout << "key : " << i.first << " value : " << i.second << "\n";
     }
+    cout << "\n" << endl;
 
-    // Point 2 : Changing/accessing values as array
-    M[3] += 2; //M[3] = 25
-    cout << M[3] << "\n";
-
-    // Point 3 : Erasing
-    //M.erase(key);
-    
     // Point 4 : Finding
     //map<int, int>::iterator it = M.find(key); 
     //Gives the iterator to the element val if it is found otherwise returns m.end() .
-    
+    int target = 2;
+    map<int, int>::iterator f = M.find(target);
+    cout << "Point 4:" << endl;
+    if (f != M.end())
+        cout << M[target] << endl;
+    cout << "\n" << endl;
     // Point 5 : 
 }
