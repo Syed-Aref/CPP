@@ -34,14 +34,133 @@ WHEN:
 pX = pY;
 // pX's new value is pY
 // *pX = y
-// &x != pX
-// but x!=y
-// &x != &y
+// &x != pX(&x remained unchanged)
+// but x!=y(x remained unchanged)
+// So,pX and pY both point carry the memory address of y now.
 WHEN:
 x = y;
 // *pX = y
 // But &x = pX
-//pX != pY
-// &x != &y
+// pX != pY(pX remained unchanged)
+// &x != &y(&x remained unchanged)
+// So,only pX or &x's value have been changed not memory address
+
+-----------------------------------
+(*)Confusion while using in argument
+#include <iostream>
+
+using namespace std;
+void reset(int *pointer_var)
+{
+	*pointer_var = 0;
+	return;	
+}
 
 
+int main()
+{
+	int var01 = 10;
+	int var02 =5;
+	
+	cout << var01 <<endl;
+	cout << var02 <<endl;
+	int *pointer_var01 = &var01;
+	reset( pointer_var01 );
+	reset( &var02 );
+	cout << var01 <<endl;
+	cout << var02 <<endl;
+}
+
+///  void reset(int &var) tis wrong statement though *pointer_var = &var.But in main function both reset(*pointer var) & reset(&var) works.Why?
+/* 
+Ans :
+While building function we can't put values,use variable.But in main function we can put both
+Ex:
+void funt(int x) is correct.
+void func(5) is wrong
+In main func
+func(x) or func(5) both are correct.
+Similarly int x is equv. to int* pointer_var/int *pointer_var
+x = 5 is eqv to pointer_var = 5/int *pointer_var = 5(value of pointer_var)
+*/
+-----------------------------------
+(*)Pointer use in function
+#include<iostream>
+using namespace std;
+void increaseByOne(int* p)
+{
+	*p = *p+1;
+}
+int main()
+{
+	int a = 10;	
+	increaseByOne(&a);
+	cout << a << endl;
+}
+
+-----------------------------------
+(*)Pointer of Pointers
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a = 10;
+	int* pa = &a;
+	cout << "value of a : " << a << endl;
+	cout << "value of memory of a --> pa : " << pa << endl;
+	int** ppa = &pa;
+	cout << "value of memory of pa --> ppa : " << ppa << endl;
+	int*** pppa = &ppa;
+	cout << "value of memory of ppa --> pppa : " << pppa << endl;
+	// derefferencing
+	cout <<"*pa : "<<*pa<<endl; // a
+	// *pa = a ....(1)
+	cout <<"*(*ppa) : "<<*(*ppa)<<endl; //a
+	// *ppa = pa
+	// *(*ppa) = *pa = a [From (1)]
+	// *(*ppa) = a ... (2)
+	cout << "*(*(*pppa)) : " << *(*(*pppa))<<endl; //a
+	// *pppa = *ppa
+	// *(*(*pppa)) = *(*ppa) = a [From (2) ]
+}
+-----------------------------------
+(*)Pointer arithmetic
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a = 20;
+	int *pA = &a;
+	/*
+	int takes 4 byte.
+	lets assume memory is stored in adress 202
+	it will take 202,203,204,205
+	next visible memory will be 206
+	to access next memory(206) we need to add 1 with the current pointer
+	*/
+	int *pA_next = pA + 1;
+	cout <<pA<<endl;
+	cout <<pA_next<<endl;
+	// Similarly to access previous empty memory
+	int *pA_prev = pA - 1;
+	cout << pA_prev <<endl;
+	
+	//dereffencing pA will give a
+	//But derefrencing pA_next & pA_prev will give random value.We call it garbage value
+	cout <<*pA_next<<endl;
+	cout <<*pA_prev<<endl;
+	
+}
+
+
+-----------------------------------
+(*)void Pointer
+	int a = 1025;
+	int *pA = &a;
+	void *pV = pA;
+	cout << pV <<endl;
+	// pV+1, pV - 1, derefferencing pV IS NOT POSSIBLE 
+    
+    
+    
