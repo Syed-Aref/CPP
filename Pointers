@@ -98,7 +98,8 @@ int main()
 	increaseByOne(&a);
 	cout << a << endl;
 }
-Ex:02
+-----------------------------------
+(*)Pointer of reference data type
 #include <vector>
 #include <iostream>
 #include <bitset>
