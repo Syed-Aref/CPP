@@ -1,0 +1,43 @@
+#include <vector>
+#include <iostream>
+#include <bitset>
+#include <math.h>
+//#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+
+	while (true)
+	{
+		int a, b;
+		cin >> a >> b;
+		int sm = fmin(a, b);
+		int lr = fmax(a, b);
+		int car = 0;
+		int prd;
+		vector<int> vc;
+		while (lr!=0)
+		{
+			prd = (lr % 10) * sm + car;
+			car = prd / 10;
+			prd = prd % 10;
+			vc.push_back(prd);
+			lr = lr / 10;
+		}
+		while (car != 0)
+		{
+			vc.push_back(car%10);
+			car = car / 10;
+		}
+		reverse(vc.begin(),vc.end());
+		cout << lr << " * " << sm << " : ";
+		int sz = vc.size();
+		for (int i = 0; i < sz; i++)
+		{
+			cout << vc[i];
+		}
+		cout << endl;
+	}
+}
