@@ -36,5 +36,9 @@ int main()
     // *N3[1] = new NUM3(1,2,4); --> Error
     
     //OBSERVATION : STARS ARE USED AS NEW(new) IN JAVA 
+    
+    
+    **FOR ARRAY
+    int *arr  = new int[9];
     return 0;
 }
