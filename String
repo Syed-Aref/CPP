@@ -1,7 +1,7 @@
-(*)string s = "Aref";
 (*)Header: #include <cstring>
-(*)cout<<s[2]<<endl; // will print the third character( 0 based index )which is 'e'//
-(*)s[0] = 'a';
+(*)string s = "Aref";
+   cout<<s[2]<<endl; // will print the third character( 0 based index )which is 'e'//
+   s[0] = 'a';
    cout<<s<<endl;// output: aref //
 (*)Length: string_var.length();
 (*)
@@ -17,25 +17,25 @@
   size_t i = 2;
   string s1 = s.substr(i,i+2);
   -->
-  size_t n_pos = string::npos;//n_pos = 4294967295 . A sentinetal value
+  size_t n_pos = string::npos;c//n_pos = 4294967295.A sentinetal value
   -->
   string str = "Syed Aref Ahmed"; 
   string str1 = "Aref"; 
-  size_t find = str.find(str1);
+  size_t find = str.find(str1); // returns size_t data type
   cout<<find<<endl;// find = 4//
   -->
   string str = "Syed Aref Ahmed"; 
-  size_tfind = str.find('e');// find = 2.'e' appears at index 2,7,13 but will take the first value.Else if, in returns n_pos  
+  size_tfind = str.find('e');// find = 2.'e' appears at index 2,7,13 but will take the first value.Else if, it returns n_pos  
   cout<<find<<endl;
+  Also,
   string str = "Syed Aref Ahmed";  
   size_t find = str.find(string str,size_t startPos,size_t n);
-  /*
+  Here,
   startPos = starting position
   n = the number of numbers that will be checked from startPos
   if n = 1, only startPos will be checked
   if n = 2, form startPos to startPos+1 will be checked
   */
-  cout<<find<<endl;
 (*)
    Input:
    string s;
