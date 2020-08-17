@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+
+    string s = "";
+    string line;
+    
+    //Inputting lines until eof and string them in s
+    while (getline(cin, line))
+    {
+        
+        s = s + " " + line;
+    }
+    
+    // string s to char[] str
+    char *str = new char[s.length()];
+    int sz = s.length();
+    for (int i = 0; i < sz; i++)
+    {
+        str[i] = s[i];
+    }
+    
+    //printing the full input
+    for (int i = 0; i < sz; i++)
+    {
+        cout << str[i];
+    }
+    cout << endl;
+    
+    //printing all single string elements
+    char* token = strtok(str, " ");
+    while (token != NULL)
+    {
+        printf("%s\n", token);
+        token = strtok(NULL, " ");
+    }
+
+}
