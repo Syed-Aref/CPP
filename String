@@ -5,17 +5,30 @@
    cout<<s<<endl;// output: aref //
 (*)Length: string_var.length();
 (*)
+
+  -->
+  In c++, instead of using int for string we use size_t data type.
+  In java, 
+  string s = "abcdef";
+  int i = 2;
+  String s1 = s.substring(i,i+2);
+  In c++,
+  string s = "abcdef";
+  size_t i = 2;
+  string s1 = s.substr(i,i+2);
+  -->
+  size_t n_pos = string::npos;//n_pos = 4294967295 . A sentinetal value
   -->
   string str = "Syed Aref Ahmed"; 
   string str1 = "Aref"; 
-  int find = str.find(str1);
+  size_t find = str.find(str1);
   cout<<find<<endl;// find = 4//
   -->
   string str = "Syed Aref Ahmed"; 
-  int find = str.find('e');// find = 2.'e' appears at index 2,7,13 but will take the first value//
+  size_tfind = str.find('e');// find = 2.'e' appears at index 2,7,13 but will take the first value.Else if, in returns n_pos  
   cout<<find<<endl;
   string str = "Syed Aref Ahmed";  
-  int find = str.find(string str,int startPos,int n);
+  size_t find = str.find(string str,size_t startPos,size_t n);
   /*
   startPos = starting position
   n = the number of numbers that will be checked from startPos
@@ -23,12 +36,6 @@
   if n = 2, form startPos to startPos+1 will be checked
   */
   cout<<find<<endl;
-  
-  
-  Note: if the string or character is not found the function will return -1
-(*)
-   string str="We think in generalities, but we live in details.";
-   string str2 = str.substr (3,5);     // "think"
 (*)
    Input:
    string s;
