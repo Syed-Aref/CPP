@@ -1,17 +1,33 @@
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
     std::pair<int, int> p(10, 20);
 
-    std::pair<char, int> p1 = std::make_pair('a', 1);
+    std::pair<char, int> ci = std::make_pair('a', 1);
 
-    cout << p.first << "\n";
-    cout << p.second<< "\n";
-
+    cout << ci.first << "\n";
+    cout << ci.second<< "\n";
     cout << "\n";
+    
+    pair <int, int> p1{ 0,0 }, p2{0,0};
 
-    p1.first = 'c';  // changing p1.first = 'a' to 'c'
-    cout << p1.first << "\n";
-    cout << p1.second << "\n";
+    // Changing pair's elements
+    p1.first = 34;
+    cout << p1.first << endl;
+    p1.second = 100;
+    cout << p1.second << endl;
+
+    //Understanding lexicographhical order
+    //
+    p1.first = 10 , p1.second = 15, p2.first = 9 ,p2.second = 14;
+    cout << (p1 > p2) << endl; // 1
+    //
+    p1.first = 10, p1.second = 15, p2.first = 10, p2.second = 14;
+    cout << (p1 > p2) << endl; // 1
+    //
+    p1.first = 10, p1.second = 15, p2.first = 10, p2.second = 15;
+    cout << (p1 > p2) << endl; // 0
+    
 }
