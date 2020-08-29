@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class NUM3
 {
@@ -12,33 +12,40 @@ class NUM3
 			n2 = b;
 			n3 = c;
 		}
-		/*
-		NUM3()
-		{
-			
-		}
-		*/
-	
-		
+		NUM3(){ n1 = 0,n2 = 0,n3 = 0 ;}
+
+
 };
 int main()
 {
-    //(1)
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+
+    // General :
+    //(1)Single element:
 	NUM3 N1(12,24,48);
-	
-    //(2)
+	//(2)Array
+	NUM3 N1_[4];// Array of default class would not initialized if default class was not set as class constructor(line 15)
+	//N1_[0] = N1_[0](19,23,45); --> Error.Once N1_[0],N1_[1],N1_[2],N1_[3] have been initialized default it can not be initialized again
+	cout <<N1_[1].n2<<"\n";
+
+
+    // New(asterisk sign) :
+    //(1)
 	NUM3* N2 = new NUM3(10,2,8);
-	
-    //(3)
-    NUM3 *N3[4];
-    N3[0] = new NUM3(1,2,4);
-    N3[1] = new NUM3(1,2,4);
+    //(2)
+    NUM3 *N2_[4];
+    N2_[0] = new NUM3(1,2,4);
+    N2_[1] = new NUM3(1,2,4);
     // *N3[1] = new NUM3(1,2,4); --> Error
-    
-    //OBSERVATION : STARS ARE USED AS NEW(new) IN JAVA 
-    
-    
-    **FOR ARRAY
-    int *arr  = new int[9];
-    return 0;
+
+
+
+    //FOR ARRAY
+    // General
+    int arr_g[9];
+    // New
+    int *arr_n = new int[9];
+
 }
