@@ -1,22 +1,51 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
-class RowColum
+class NUM3
 {
-    public:
-        int r = 0;
-        int c = 0;
-        RowColum(int R,int C)
-        {
-          r = R;
-          c = C;
-        }
+	public :
+		int n1;
+		int n2;
+		int n3;
+		NUM3(int a,int b,int c)
+		{
+			n1 = a;
+			n2 = b;
+			n3 = c;
+		}
+		NUM3(){ n1 = 0,n2 = 0,n3 = 0 ;}
+
+
 };
-int main() {
-  vector <RowColum> vrc;
-  vrc.push_back( RowColum(9,89) );
-  
-  cout<< vrc[0].c <<"\n";
-  
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+
+    // General :
+    //(1)Single element:
+	NUM3 N1(12,24,48);
+	//(2)Array
+	NUM3 N1_[4];// Array of default class would not initialized if default class was not set as class constructor(line 15)
+	//N1_[0] = N1_[0](19,23,45); --> Error.Once N1_[0],N1_[1],N1_[2],N1_[3] have been initialized default it can not be initialized again
+	cout <<N1_[1].n2<<"\n";
+
+
+    // New(asterisk sign) :
+    //(1)
+	NUM3* N2 = new NUM3(10,2,8);
+    //(2)
+    NUM3 *N2_[4];
+    N2_[0] = new NUM3(1,2,4);
+    N2_[1] = new NUM3(1,2,4);
+    // *N3[1] = new NUM3(1,2,4); --> Error
+
+
+
+    //FOR ARRAY
+    // General
+    int arr_g[9];
+    // New
+    int *arr_n = new int[9];
 
 }
