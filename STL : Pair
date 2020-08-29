@@ -30,4 +30,6 @@ int main()
     p1.first = 10, p1.second = 15, p2.first = 10, p2.second = 15;
     cout << (p1 > p2) << endl; // 0
     
+    // All pair operations are O(1) 
+    
 }
