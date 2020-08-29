@@ -21,6 +21,17 @@ int main()
     v.insert(v.begin(),element) // inserting at first position
     v.insert(v.begin()+2,element) // inserting at (1+2)=3rd position
     Time : O(N)
+    4.Lower bound :
+    auto it_lb = lower_bound(v.begin(),v.end(),44);
+    Time : O(log(N))
+    5.Upper bound :
+    auto it_ub = upper_bound(v.begin(),v.end(),44);
+    Time : O(log(N))
+    6.Clear:
+    v.clear(); 
+    Time: O(1)
+    
+    
     
     // set
     1.Find: 
@@ -31,7 +42,19 @@ int main()
     Time : O(log(N))
     3.Insert : 
     s.insert(target)
+    Time : O(log(N))4.Lower bound :
+    auto it_lb = s.lower_bound(element);
     Time : O(log(N))
+    5.Upper bound :
+    auto it_ub = s.upper_bound(element);
+    Time : O(log(N))
+    6.Clear:
+    s.clear(); 
+    Time: O(1)
+    
+    
+    
+    
     
     
     // map
@@ -44,6 +67,19 @@ int main()
     3.Insert : 
     m[new_key] = any_value
     Time : O(log(N))
+    4.Lower bound :
+    auto it_lb = m.lower_bound(element);
+    Time : O(log(N))
+    5.Upper bound :
+    auto it_ub = m.upper_bound(element);
+    Time : O(log(N))
+    6.Clear:
+    m.clear(); 
+    Time: O(1)
+    
+    
+    
+    
     */
     
     // ============================================================================================================ //
@@ -54,11 +90,24 @@ int main()
     v.pop_back() // O(1)
     reverse(v.begin(),v.end()) // O(N)
     sort(v.begin(),v.end()) //O(log(N))
+    vector<int> v1(7); // O(N) [Initializing.Creates N sized 0 defined vector]
+    v1.resize(4); // O(N) [Resizing.Keeps first 0 to n-1 elements and deletes the rest]
+    //For vector iterators:
+    auto any_it1 = v.begin() + m; // O(N)[m>=0 & m<=size]
+    auto any_it2 = v.end() - m; // O(N)[m>=0 & m<=size]
+    
+    Additional set and map methods
+    // set iterator doesn't support iterator arithmetic operation
+    // Accessing mth number from the begining    
+    for(int i = 0;i<m-1;i++)
+        it++;
+    This is O(N) operation
+    
+    s.count(element); // O(log(N)) [Returns 1 if element is present ot returns 0]
     
     
-    
-    
-    
+    */
+}
     
     
     
