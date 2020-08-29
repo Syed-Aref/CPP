@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    std::pair<int, int> p(10, 20);
+    pair<int, int> p(10, 20);
 
-    std::pair<char, int> ci = std::make_pair('a', 1);
+    pair<char, int> ci = make_pair('a', 1);
 
     cout << ci.first << "\n";
     cout << ci.second<< "\n";
