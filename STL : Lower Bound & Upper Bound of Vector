@@ -1,28 +1,24 @@
 
-
-#include <iostream>
-#include <vector>
-#include <iterator>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     vector<int> v = { 10, 20, 30, 30, 30, 40, 50 };
-    std::vector<int>::iterator it1, it2,it3;
 
-    it1 = std::lower_bound(v.begin(), v.end(), 30);
-    it2 = std::lower_bound(v.begin(), v.end(), 29);
-    it3 = std::lower_bound(v.begin(), v.end(), 59);
+
+    auto it1 = lower_bound(v.begin(), v.end(), 30);
+    auto it2 = lower_bound(v.begin(), v.end(), 29);
+    auto it3 = lower_bound(v.begin(), v.end(), 59);
 
     cout << it1 - v.begin() << "\n";
     cout << it3 - v.begin()  << "\n";
      /*
      In CPP iterator - vector.begin() gives the memory position/adress at the 0-th element of vector
-     
-     *iterator gives value at memory position/adress 
+
+     *iterator gives value at memory position/adress
 
      Lower bound works as this >= sign:
-     1)If target value is present in sorted vector it points iterator to that value(If there are 
+     1)If target value is present in sorted vector it points iterator to that value(If there are
      multiple target values it will point iterator to that value memory of first occurance)
      2)Else it will point out iterator to the memory of that first value which will be greater than target value.
      3)If target value is greater than the last element it will point iterator to the next empty memory of last value
@@ -35,17 +31,16 @@ int main()
         If target is 10 it will point to the memory of index : 8
      (*)Iterator - v.begin gives index position of that number.
      (*)If iterator points out to the next empty memory of last index of the array, *iterator will crash
-     
+
      */
-    std::vector<int>::iterator it4;
-    it4 = std::upper_bound(v.begin(), v.end(), 30);
+    auto it4 = upper_bound(v.begin(), v.end(), 30);
     cout << it4 - v.begin() << "\n";
     /*
 
     Upper bound works as this > sign:
-    1)If target value is present in sorted vector it points iterator to that value(If there are are multiple target values it 
+    1)If target value is present in sorted vector it points iterator to that value(If there are are multiple target values it
     will point iterator to that value memory of first occurance)
-    2)It will point out iterator to the memory of that first value which will be greater than target value.(Even if target 
+    2)It will point out iterator to the memory of that first value which will be greater than target value.(Even if target
     value is present one or multiple times)
     3)If target value is greater than the last element it will point iterator to the next empty memory of last value
     Ex:
@@ -58,4 +53,3 @@ int main()
 
     */
 }
-
