@@ -1,7 +1,6 @@
-#include <iostream>
-#include <vector>
-#include <iterator>
+#include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
     vector<int> ar;
@@ -17,15 +16,15 @@ int main()
     for (int i = 1; i < n; i++)
         cout << " " <<ar[i];
     cout << endl;
-    vector<int>::iterator ptr1, ptr2;
 
-    ptr1 = ar.begin();
+
+    auto ptr1 = ar.begin();
     cout << "First element is : " << *ptr1 << "\n";
-    // [cout << ptr1 << "\n";] will give error.Pointer's can not be printed in console.
+    // [cout << ptr1 << "\n";] will give error.Pointer's can not be printed in console]
 
-    ptr2 = ar.end();
-    // ptr2 points out to the next memory address of last element.
-    // [cout << "Last element is : " << *ptr2 << "\n";]  wrong statement because last elemment is not in ptr2.
+    auto ptr2 = ar.end();
+    // ptr2 points out to the next memory address of last element
+    // [cout << "Last element is : " << *ptr2 << "\n";]  wrong statement because last elemment is not in ptr2
     // [cout << ptr2 << "\n";] is also wrong statement
 
     //However we can get length of vector by ptr2 ans ptr1 since pointer(+-)pointer gives integer value.
@@ -34,31 +33,33 @@ int main()
     //Last or any element using prev and next
 
     //Last element
-    vector<int>::iterator ptrLast;
-    ptrLast = std::prev(ptr2, 1);
+    auto ptrLast = prev(ptr2, 1);
     cout << "Last element is : " << *ptrLast << "\n";
 
     //Last second element
-    vector<int>::iterator ptrLast2 = std::prev(ptr2, 2);
+    auto ptrLast2 = prev(ptr2, 2);
 
     //Second element of vector
-    vector<int>::iterator ptr2nd;
-    ptr2nd = std::next(ptr1, 1);
+    auto ptr2nd = next(ptr1, 1);
     cout << "Second element is : " << *ptr2nd << "\n";
 
     //Third element
-    vector<int>::iterator ptr3rd = std::next(ptr1, 2);
+    auto ptr3rd = next(ptr1, 2);
     cout << "Third element is : " << *ptr3rd << "\n";
 
     //Last Second element
-    vector<int>::iterator ptrlast2nd = std::prev(ptr2, 2);
+    auto ptrlast2nd = prev(ptr2, 2);
     cout << "Last second element is : " << *ptrlast2nd << endl;
 
     //Last Third element
-    vector<int>::iterator ptrlast3rd = std::prev(ptr2, 3);
+    auto ptrlast3rd = prev(ptr2, 3);
     cout << "Last second element is : " << *ptrlast3rd << endl;
+    
+    
+    /*
+    Note : Iterators also support arithmetic.(Similar to pointer arithmetic.Details in STL : methods)
+    */
 }
-
 
 Output:
 11 23 43 48 5 12 29
