@@ -2,13 +2,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool sort_func1(int x, int y)
+bool sort_func1(int x, int y) // a1,a2
 {
-    return x > y;
+    return x > y; //a1 > a2
 }
-bool sort_func2(int x, int y)
+bool sort_func2(int x, int y) // a1,a2
 {
-    return x < y;
+    return x < y; // a1 < a2
 }
 int main()
 {
