@@ -46,7 +46,9 @@ x = y;
 // So,only pX or &x's value have been changed not memory address
 
 -----------------------------------
-(*)Confusion while using in argument
+-->Pointer use in function
+(*)Passing in arguement
+//Example : 1
 #include <iostream>
 
 using namespace std;
@@ -84,8 +86,7 @@ Similarly int x is equv. to int* pointer_var/int *pointer_var
 x = 5 is eqv to pointer_var = 5/int *pointer_var = 5(value of pointer_var)
 */
 -----------------------------------
-(*)Pointer use in function
-Ex:01
+//Example : 2
 #include<iostream>
 using namespace std;
 void increaseByOne(int* p)
@@ -99,7 +100,35 @@ int main()
 	cout << a << endl;
 }
 -----------------------------------
-(*)Pointer of reference data type
+-->Passing reference
+(*)Primitive data type
+#include <iostream>
+using namespace std;
+
+void make10_p(int &x)
+{
+	x = 10;
+	return;	
+}
+void make10(int x)
+{
+	x = 10;
+	return;	
+}
+int main()
+{
+    int x1 = 20;
+    int  x2 = 20;
+    make10_p(x1);
+    make10(x2);
+    cout << x1 << endl; ///10
+    cout << x2 << endl; ///20
+}
+/**
+In line 115 x can not access x2's adress
+But in line 110 x can access x1's adress
+**/
+(*)Reference data type
 #include <vector>
 #include <iostream>
 #include <bitset>
