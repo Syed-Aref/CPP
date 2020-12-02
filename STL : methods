@@ -83,30 +83,7 @@ int main()
     */
     
     // ============================================================================================================ //
-    /*
     
-    Additional vector methods:
-    v.push_back(element)  //O(1)
-    v.pop_back() // O(1)
-    reverse(v.begin(),v.end()) // O(N)
-    sort(v.begin(),v.end()) //O(log(N))
-    vector<int> v1(7); // O(N) [Initializing.Creates N sized 0 defined vector]
-    v1.resize(4); // O(N) [Resizing.Keeps first 0 to n-1 elements and deletes the rest]
-    //For vector iterators:
-    auto any_it1 = v.begin() + m; // O(N)[m>=0 & m<=size]
-    auto any_it2 = v.end() - m; // O(N)[m>=0 & m<=size]
-    
-    Additional set and map methods
-    // set iterator doesn't support iterator arithmetic operation
-    // Accessing mth number from the begining    
-    for(int i = 0;i<m-1;i++)
-        it++;
-    This is O(N) operation
-    
-    s.count(element); // O(log(N)) [Returns 1 if element is present ot returns 0]
-    
-    
-    */
 }
     
     
