@@ -1,48 +1,52 @@
-(*)Header: #include <cstring>
-(*)string s = "Aref";
-   cout<<s[2]<<endl; // will print the third character( 0 based index )which is 'e'//
-   s[0] = 'a';
-   cout<<s<<endl;// output: aref //
-(*)Length: string_var.length();
-(*)
+string s = "Aref";
+cout<<s[2]<<endl; // will print the third character( 0 based index )which is 'e'//
+s[0] = 'a';
+cout<< s <<endl;// output: aref //
+ 
+Length: string_var.length(); // size_t variable(Also works as int)
+string_var.push_back(character);
 
-  -->
-  In c++, instead of using int for string we use size_t data type.
-  In java, 
-  string s = "abcdef";
-  int i = 2;
-  String s1 = s.substring(i,i+2);
-  In c++,
-  string s = "abcdef";
-  size_t i = 2;
-  string s1 = s.substr(i,i+2);
-  -->
-  size_t n_pos = string::npos;c//n_pos = 4294967295.A sentinetal value
-  -->
-  string str = "Syed Aref Ahmed"; 
-  string str1 = "Aref"; 
-  size_t find = str.find(str1); // returns size_t data type
-  cout<<find<<endl;// find = 4//
-  -->
-  string str = "Syed Aref Ahmed"; 
-  size_tfind = str.find('e');// find = 2.'e' appears at index 2,7,13 but will take the first value.Else if, it returns n_pos  
-  cout<<find<<endl;
-  Also,
-  string str = "Syed Aref Ahmed";  
-  size_t find = str.find(string str,size_t startPos,size_t n);
-  Here,
-  startPos = starting position
-  n = the number of numbers that will be checked from startPos
-  if n = 1, only startPos will be checked
-  if n = 2, form startPos to startPos+1 will be checked
-  */
-(*)
-   Input:
-   string s;
-   //Only word//
-   cin >> s;
-   //A line//
-   getline(cin,s);
-(*)
-(*)
-(*)
+
+Input:
+string s;
+//only word
+cin >> s;
+//a line
+getline(cin,s);
+
+/****************************************/
+int to string
+    string sn = "1235";
+    
+    stringstream ss(sn);
+    int x = 0;
+    ss >> x;
+    cout << x << endl;
+    cout << x * 10 << endl;
+
+    long long int dx = 0;
+    // ss >> dx; --> Wrong
+    /*
+    stringstream ss(sn);
+    ss >> dx;
+    This would also be wrong.ss can not be initialized again
+    */
+    stringstream ss1(sn); 
+    ss1 >> dx;
+    cout << dx << endl;
+    cout << dx / 5 << endl;
+    
+/****************************************/
+string to int
+    int a = 12;
+    ostringstream str1; 
+    str1 << a;
+    string sa = str1.str();
+    cout << sa <<"\n";
+    int b = 20;
+    
+    ostringstream str2; 
+    str2 << b;
+    string sb = str2.str();
+    cout << sb <<"\n";
+
