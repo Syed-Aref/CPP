@@ -8,74 +8,34 @@ int main()
     m[1] = 9, m[12] = 89, m[4] = 56, m[7] = 89, m[15] = 78, m[11] = 110;
     
     
-    /*
-    // vector
-    1.Find : 
-    find(v.begin(),v.end(),target) 
-    Time : O(N)
-    2.Erase :
-    v.erase(v.begin()+4) // erases v[4] or fifth element
-    v.erase(v.begin()+2,v.begin()+5) // erases v[2],v[3],v[4]
-    Time : O(N)
-    3.Insert :
-    v.insert(v.begin(),element) // inserting at first position
-    v.insert(v.begin()+2,element) // inserting at (1+2)=3rd position
-    Time : O(N)
-    4.Lower bound :
+    /*** vector ***/
     auto it_lb = lower_bound(v.begin(),v.end(),44);
-    Time : O(log(N))
-    5.Upper bound :
+    ///O(log(N))
+    
     auto it_ub = upper_bound(v.begin(),v.end(),44);
-    Time : O(log(N))
-    6.Clear:
+    ///O(log(N))
+    
     v.clear(); 
-    Time: O(1)
+    ///O(1)
     
     
     
-    // set
-    1.Find: 
-    s.find(target)
-    Time : O(log(N))
-    2.Erase : 
-    s.erase(target)
-    Time : O(log(N))
-    3.Insert : 
+    /*** set ***/
     s.insert(target)
-    Time : O(log(N))4.Lower bound :
+    ///O(log(N)
+    
     auto it_lb = s.lower_bound(element);
-    Time : O(log(N))
-    5.Upper bound :
+    ///O(log(N))
+
     auto it_ub = s.upper_bound(element);
-    Time : O(log(N))
-    6.Clear:
+    ///O(log(N))
+
     s.clear(); 
-    Time: O(1)
+    ///O(1)
     
+    s.count(element)
+    ///O(log(N))
     
-    
-    
-    
-    
-    // map
-    1.Find :
-    m.find(key_target)
-    Time : O(log(N))
-    2.Erase : 
-    m.erase(key_target)
-    Time : O(log(N))
-    3.Insert : 
-    m[new_key] = any_value
-    Time : O(log(N))
-    4.Lower bound :
-    auto it_lb = m.lower_bound(element);
-    Time : O(log(N))
-    5.Upper bound :
-    auto it_ub = m.upper_bound(element);
-    Time : O(log(N))
-    6.Clear:
-    m.clear(); 
-    Time: O(1)
     
     
     
