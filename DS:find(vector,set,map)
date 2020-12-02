@@ -57,13 +57,11 @@ int main()
         int target;
         cin >> target;
         auto it = m.find(target);
-        if (it == m.end())
-            cout << "Sorry" << endl;
+        if( it==m.end() )
+            cout << "Not found" << endl;
         else
-        {
-            auto p = *it;
-            cout << "Key:" << p.first << ",Value:" << p.second << endl;
-        }
+            cout << (*it).first << " = " << (*it).second;
+        /// Checks key
     }
     */
 }
