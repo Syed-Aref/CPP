@@ -1,27 +1,4 @@
-#include <iostream>
 
-using std::cout;
-class RowColum
-{
-    public:
-        int r = 0;
-        int c = 0;
-};
-int main()
-{
-    //Intializing a single object//
-    RowColum rc1;
-    cout<<rc1.r<<"\n";// Output: 0 //
-    
-    //Initializing through array
-    RowColum rc[6];
-    rc[1].c = 5;
-    rc[2].r = 55;
-    cout<<rc[1].c<<" "<<rc[5].r<<"\n";
-    rc[5].r = -8;
-    cout<<rc[1].c<<" "<<rc[5].r<<"\n";
-    return 0;
-}
 
 -------------------------------------***-------------------------------------
 
@@ -130,3 +107,102 @@ New Book
 Lilaboti is written by Humayun Ahmed
 Rating is: 9
 */
+-------------------------------------***-------------------------------------
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Class_S
+{
+public :
+    int s1;
+    int s2;
+    Class_S()
+    {
+        s1 = s2 = 20; /// If not initialized, the variables will be assigned random values
+    }
+};
+
+class Class_N
+{
+	public :
+		int n1;
+		int n2;
+		int n3;
+		Class_N(int a,int b,int c)
+		{
+			n1 = a;
+			n2 = b;
+			n3 = c;
+		}
+
+
+
+};
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    Class_S cl_s1;
+    Class_N num1(0,0,0);
+
+
+
+
+
+
+    /// Also,
+    Class_S* cl_s2 = new Class_S();
+    Class_N* num2 = new Class_N(0,0,0);
+
+
+    Class_S arr_cl_s[101];
+    for(int i = 0;i<101;i++)
+    {
+        cout << arr_cl_s[i].s1 << endl;
+        cout << arr_cl_s[i].s2 << endl;
+        cout << "----------" << endl;
+    }
+
+
+    vector<Class_S> vec_cl_s;
+
+    Class_S sv1;
+    vec_cl_s.push_back( sv1 );
+    /// sv1 can not be assigned with new class again
+
+    Class_S* sv2 = new Class_S();
+    vec_cl_s.push_back( *sv2 );
+    sv2 = new Class_S();
+    vec_cl_s.push_back( *sv2 );
+
+    for(int i = 0;i<vec_cl_s.size();i++){
+        cout << vec_cl_s[i].s1+5 << endl;
+        cout << vec_cl_s[i].s2+6 << endl;
+        cout << "----------" << endl;
+    }
+
+    Class_N* arr_cl_n[101];
+    for(int i = 0;i<101;i++) arr_cl_n[i] = new Class_N(0,0,0);
+
+    vector<Class_N> vec_cl_n;
+    Class_N* tempcln = new Class_N(0,0,0);
+    vec_cl_n.push_back(*tempcln);
+
+    tempcln = new Class_N(1,1,1);
+    vec_cl_n.push_back(*tempcln);
+
+}
+
+
+
+
+
+
+
+
+
+
+
