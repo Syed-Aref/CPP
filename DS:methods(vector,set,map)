@@ -66,6 +66,33 @@ int main()
     
     // ============================================================================================================ //
     
+    /**
+    Also,
+    /// Vector
+    back(): last element // O(1)
+    front(): last element // O(1)
+    pop_back(): void(removes last elem) // O(1)
+    push_back(): void(inserts at the end of vector) // O(1)
+
+
+    /// List
+    Same methods in vector,in addition
+    pop_front( ) : void(removes first elem) // O(1)
+
+    /// Stack
+    push( ): same as vector
+    pop( ): returns last element and removes as well // O(1)
+    top( ): returns last element // O(1)
+    empty( ): bool(checks if empty) ///O(1).
+    size( ): returns the size of stack ///O(1).
+
+    /// Priority Queue
+    push( ): inserts a new element /// O(logN)
+    pop( ): returns last element and removes as well /// O(logN)
+    top( ): returns last element // O(1)
+    empty( ): bool(checks if empty) ///O(1).
+    size( ): returns the size of stack ///O(1).
+    **/
 }
     
     
