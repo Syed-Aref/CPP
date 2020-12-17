@@ -9,35 +9,57 @@ int main()
     
     
     /*** vector ***/
-    auto it_lb = lower_bound(v.begin(),v.end(),44);
+    auto it_lb = lower_bound(v.begin(),v.end(),44); ///iterator
     ///O(log(N))
     
-    auto it_ub = upper_bound(v.begin(),v.end(),44);
+    auto it_ub = upper_bound(v.begin(),v.end(),44); ///iterator
     ///O(log(N))
     
-    v.clear(); 
+    v.clear(); ///void
     ///O(1)
     
     
     
     /*** set ***/
-    s.insert(target)
+    s.insert(target) //void
     ///O(log(N)
     
-    auto it_lb = s.lower_bound(element);
+    auto it_lb = s.lower_bound(element); ///iterartor
     ///O(log(N))
 
-    auto it_ub = s.upper_bound(element);
+    auto it_ub = s.upper_bound(element); ///iterator
     ///O(log(N))
 
-    s.clear(); 
+    s.clear(); //void
     ///O(1)
     
-    s.count(element)
+    s.count(element) ///int; 1 if present , else 0
+    ///O(log(N))
+    
+    s.find(element) ///iterator
     ///O(log(N))
     
     
+    /*** map ***/
+    mp.insert(target) //void
+    ///O(log(N)
     
+    auto it_lb = mp.lower_bound(element); ///iterartor
+    ///O(log(N))
+
+    auto it_ub = mp.upper_bound(element); ///iterator
+    ///O(log(N))
+
+    mp.clear(); //void
+    ///O(1)
+    
+    mp.count(element) ///int; 1 if present , else 0
+    ///O(log(N))
+    
+    mp.find(element) ///iterator
+    ///O(log(N))
+    
+    // *iterator = pair
     
     
     */
