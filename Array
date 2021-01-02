@@ -65,3 +65,22 @@ int dynArr[5][3] = {
                         {       10,       30,       50}           //Row no:5(4)
                       };
 }
+
+
+
+/// Declaring array outside main-method and inside main method assigns different value
+
+int arr1[20];
+
+int main()
+{
+    int arr2[20];
+    
+    for(int i = 0;i<20;i++) cout << arr1[i] << " ";
+    cout << endl;
+    /// 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0(20 zeros)
+
+    for(int i = 0;i<20;i++) cout << arr2[i] << " ";
+    cout << endl;
+    /// 2008498972 7208668 2008180049 8 ... 4354272(random values)
+}
