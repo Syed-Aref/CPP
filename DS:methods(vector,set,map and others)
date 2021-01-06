@@ -86,13 +86,32 @@ int main()
     empty( ): bool(checks if empty) ///O(1).
     size( ): returns the size of stack ///O(1).
 
+    /// Queue
+    push( ): inserts a new element at the last 
+    pop( ): removes last element
+    front() : returns front element
+    back( ): returns last element 
+    empty( ): bool(checks if empty)
+    size( ): returns the size of queue
+    **/
+    
     /// Priority Queue
     push( ): inserts a new element /// O(logN)
     pop( ): returns last element and removes as well /// O(logN)
     top( ): returns last element // O(1)
     empty( ): bool(checks if empty) ///O(1).
-    size( ): returns the size of stack ///O(1).
+    size( ): returns the size of queue ///O(1).
     **/
+    
+    /// deque
+    void : push_back(element) , push_front(element) , pop_back() , pop_front()
+    // O(1)
+    back() : returns last element
+    // O(1)
+    front() : returns front element
+    // O(1)
+    size( ): returns the size of deque
+    // O(1).
 }
     
     
