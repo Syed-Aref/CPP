@@ -7,13 +7,24 @@ int main()
 
     string s = "";
     string line;
-    
+    vector<string> vstr;
+
     //Inputting lines until eof and string them in s
     while (getline(cin, line))
     {
-        
-        s = s + " " + line;
+    	s = s + " " + line;
+    	// storing all inputed characters in s with an addition ' '
+    	// before every inputs
+    	
+    	vstr.push_back(line);
+    	//storing all line inputs in vstr
+    	
     }
+    
+    //printing all line inputs
+    cout << "All line inputs:" << endl;
+    for(auto strv : vstr) cout << strv << endl;
+    cout << "============================================" << endl;
     
     // string s to char[] str
     char *str = new char[s.length()];
@@ -22,20 +33,15 @@ int main()
     {
         str[i] = s[i];
     }
-    
-    //printing the full input
-    for (int i = 0; i < sz; i++)
-    {
-        cout << str[i];
-    }
-    cout << endl;
-    
+
     //printing all single string elements
+    cout << "All single elements" << endl;
     char* token = strtok(str, " ");
     while (token != NULL)
     {
         printf("%s\n", token);
         token = strtok(NULL, " ");
     }
+    cout << "============================================" << endl;
 
 }
