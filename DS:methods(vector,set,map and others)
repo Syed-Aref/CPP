@@ -97,8 +97,8 @@ int main()
     
     /// Priority Queue
     push( ): inserts a new element /// O(logN)
-    pop( ): returns last element and removes as well /// O(logN)
-    top( ): returns last element // O(1)
+    pop( ): removes biggest element /// O(logN)
+    top( ): returns biggest element // O(1)
     empty( ): bool(checks if empty) ///O(1).
     size( ): returns the size of queue ///O(1).
     **/
