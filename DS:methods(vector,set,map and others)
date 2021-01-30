@@ -39,6 +39,8 @@ int main()
     s.find(element) ///iterator
     ///O(log(N))
     
+    s.erase(any_value) ///void [any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
+    ///O(log(N)) ?
     
     /*** map ***/
     mp.insert(target) //void
