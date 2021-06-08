@@ -238,11 +238,11 @@ int main()
 
 -----------------------------------
 (*)void Pointer
-	int a = 1025;
-	int *pA = &a;
-	void *pV = pA;
-	cout << pV <<endl;
-	// pV+1, pV - 1, derefferencing pV IS NOT POSSIBLE 
+int a = 1025;
+int *pA = &a;
+void *pV = pA;
+cout << pV <<endl;
+// pV+1, pV - 1, derefferencing pV IS NOT POSSIBLE 
     
     
     
