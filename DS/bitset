@@ -1,99 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+
+
 int main()
 {
-    const int m = 10;
-    bitset<m> bs;
-    //// bset.set(pos, b)//
-    bs.set(2,1);
-    bs.set(8,1);
-    //can also be set as bs[i]=b//
-    bs[6] = 1;
-    for(int i = 0;i<=m-1;i++)
-        cout<<bs[i]<<"\n";
-    return 0;
-}
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
+    bitset<10> bs;
 
-
-
-
-
-..........**..........
-..........**..........
-..........**..........
-
-Exemple of memory efficient bitset
-Q:Prime/non-prime check
-
-
-
-#include <bits/stdc++.h>
-using std::cout;
-using std::cin;
-using std::bitset;
-const int m = 100000000;
-bitset<m+1> bitPrime;
-int count ;//= 0;
-void sieve(int n)
-{
-    //For prime '0'.For non-prime '1'//
-    bitPrime[0] = bitPrime[1] = 1;
-    count = 0;
-    if(n==1)
-        return;
-    count++;
-    if(n==2)
-    {
-        return;
+    for(int i = 0;i<bs.size();i++) {
+        cout << "#"<< i << ": "<< bs[i] << endl;
     }
-    int rootN = (int)(sqrt(n));
-    for(int i = 4;i<=n;i+=2)
-        bitPrime[i] = 1;
-    int k;    
-    for(int i = 3;i<=rootN;i+=2)
-    {
-        if(bitPrime[i]==1)
-            continue;
-        count++;    
-        k = i;
-        for(int j = i*i;j<=n;j+=2*k)    
-        {
-            if(j>=0 && j<=n)
-                bitPrime[j] = 1;
-        }
+
+    cout << "-------------------" << endl;
+
+    bs[2] = bs[3] = bs[9] = 1;
+    for(int i = 0;i<bs.size();i++) {
+        cout << "#"<< i << ": "<< bs[i] << endl;
     }
-    if(rootN%2==0)
-        rootN++;
-    else
-        rootN+=2;
-    for(int i = rootN;i<=n;i+=2)
-    {
-        if(bitPrime[i]==0)
-            count++;
-    }
-}
-int main()
-{
-    /*
-    bitset<m+1> bs;
-    //// bset.set(pos, b)//
-    bs.set(2,1);
-    bs.set(8,1);
-    //can also be set as bs[i]=b//
-    bs[6] = 1;
-    for(int i = 0;i<=m-1;i++)
-        cout<<bs[i]<<"\n";
-    */
-    int n,q,pos;
-    cin>> n >> q;
-    sieve(n);
-    cout<<count<<"\n";
-    while(q-->0)
-    {
-        cin>>pos;
-        cout<<!bitPrime[pos]<<"\n";
-    }
-    return 0;
+
+
 }
