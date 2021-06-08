@@ -24,225 +24,45 @@ Value : 69.69 Memory : 0135FAD0
 a = 34
 d = 69.69
 -----------------------------------
-(*)CONFUSION:
-int x = 90;
-int* pX = &x;
-int y = 35;
-int* pY = &y;
-
-WHEN:
-pX = pY;
-// pX's new value is pY
-// *pX = y
-// &x != pX(&x remained unchanged)
-// but x!=y(x remained unchanged)
-// So,pX and pY both point carry the memory address of y now.
-WHEN:
-x = y;
-// *pX = y
-// But &x = pX
-// pX != pY(pX remained unchanged)
-// &x != &y(&x remained unchanged)
-// So,only pX or &x's value have been changed not memory address
-
------------------------------------
--->Pointer use in function
-(*)Passing in arguement
-//Example : 1
-#include <iostream>
-
-using namespace std;
-void reset(int *pointer_var)
-{
-	*pointer_var = 0;
-	return;	
-}
-
-
-int main()
-{
-	int var01 = 10;
-	int var02 =5;
-	
-	cout << var01 <<endl;
-	cout << var02 <<endl;
-	int *pointer_var01 = &var01;
-	reset( pointer_var01 );
-	reset( &var02 );
-	cout << var01 <<endl;
-	cout << var02 <<endl;
-}
-
-///  void reset(int &var) tis wrong statement though *pointer_var = &var.But in main function both reset(*pointer var) & reset(&var) works.Why?
-/* 
-Ans :
-While building function we can't put values,use variable.But in main function we can put both
-Ex:
-void funt(int x) is correct.
-void func(5) is wrong
-In main func
-func(x) or func(5) both are correct.
-Similarly int x is equv. to int* pointer_var/int *pointer_var
-x = 5 is eqv to pointer_var = 5/int *pointer_var = 5(value of pointer_var)
-*/
------------------------------------
-//Example : 2
-#include<iostream>
-using namespace std;
-void increaseByOne(int* p)
-{
-	*p = *p+1;
-}
-int main()
-{
-	int a = 10;	
-	increaseByOne(&a);
-	cout << a << endl;
-}
------------------------------------
--->Passing reference
-(*)Primitive data type
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-void make10_p(int &x)
-{
-	x = 10;
-	return;	
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+void f1(int* p) {
+    *p = *p + 2;
 }
-void make10(int x)
-{
-	x = 10;
-	return;	
-}
-int main()
-{
-    int x1 = 20;
-    int  x2 = 20;
-    make10_p(x1);
-    make10(x2);
-    cout << x1 << endl; ///10
-    cout << x2 << endl; ///20
-}
-/**
-In line 115 x can not access x2's adress
-But in line 110 x can access x1's adress
-**/
-(*)Reference data type
-#include <vector>
-#include <iostream>
-#include <bitset>
-#include <math.h>
-//#include <bits/stdc++.h>
-using namespace std;
-void function(vector<int>&v)
-{
-	int sz = v.size();
-	for (int i = 0; i < sz; i++)
-	{
-		v.push_back(v[i]);
-	}
+
+void f2(int& p) {
+    p = p + 2;
 }
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-	vector<int> vc;
-	vc.push_back(56);
-	vc.push_back(52); 
-	vc.push_back(78);
-	vc.push_back(90);
+    int x = 10;
+    cout << x << endl;
 
-	cout << "Before function calling :";
-	int sze = vc.size();
-	for (int i = 0; i < sze; i++)
-		cout << " " << vc[i];
-	cout << endl;
+    /// f1(x); --> Wrong
+    f1(&x);
+    cout << x << endl;
 
-	function(vc);
+    f2(x);
+    /// f2(&x); --> Wrong
+    cout << x <<endl;
 
-	cout << "After function calling :";
-	sze = vc.size();
-	for (int i = 0; i < sze; i++)
-		cout << " " << vc[i];
-	cout << endl;
 }
 
-/*
-Before function calling : 56 52 78 90
-After function calling : 56 52 78 90 56 52 78 90
-
-Note:
-If in function was : function(vector<int> v) [reference type was not passed],then the output would be: 
-Before function calling : 56 52 78 90
-After function calling : 56 52 78 90
-
-function would not change the vector.So reference type was put as arguement.
-
-*/
------------------------------------
-(*)Pointer of Pointers
-#include<iostream>
-using namespace std;
-
-int main()
-{
-	int a = 10;
-	int* pa = &a;
-	cout << "value of a : " << a << endl;
-	cout << "value of memory of a --> pa : " << pa << endl;
-	int** ppa = &pa;
-	cout << "value of memory of pa --> ppa : " << ppa << endl;
-	int*** pppa = &ppa;
-	cout << "value of memory of ppa --> pppa : " << pppa << endl;
-	// derefferencing
-	cout <<"*pa : "<<*pa<<endl; // a
-	// *pa = a ....(1)
-	cout <<"*(*ppa) : "<<*(*ppa)<<endl; //a
-	// *ppa = pa
-	// *(*ppa) = *pa = a [From (1)]
-	// *(*ppa) = a ... (2)
-	cout << "*(*(*pppa)) : " << *(*(*pppa))<<endl; //a
-	// *pppa = *ppa
-	// *(*(*pppa)) = *(*ppa) = a [From (2) ]
-}
------------------------------------
-(*)Pointer arithmetic
-#include<iostream>
-using namespace std;
-int main()
-{
-	int a = 20;
-	int *pA = &a;
-	/*
-	int takes 4 byte.
-	lets assume memory is stored in adress 202
-	it will take 202,203,204,205
-	next visible memory will be 206
-	to access next memory(206) we need to add 1 with the current pointer
-	*/
-	int *pA_next = pA + 1;
-	cout <<pA<<endl;
-	cout <<pA_next<<endl;
-	// Similarly to access previous empty memory
-	int *pA_prev = pA - 1;
-	cout << pA_prev <<endl;
-	
-	//dereffencing pA will give a
-	//But derefrencing pA_next & pA_prev will give random value.We call it garbage value
-	cout <<*pA_next<<endl;
-	cout <<*pA_prev<<endl;
-	
-}
-
-
------------------------------------
-(*)void Pointer
-int a = 1025;
-int *pA = &a;
-void *pV = pA;
-cout << pV <<endl;
-// pV+1, pV - 1, derefferencing pV IS NOT POSSIBLE 
     
     
     
