@@ -15,15 +15,18 @@ cin >> s;
 getline(cin,s);
 
 /****************************************/
-int to string
+    ///string to int or long
+    
     string sn = "1235";
     
+    ///int
     stringstream ss(sn);
     int x = 0;
     ss >> x;
     cout << x << endl;
     cout << x * 10 << endl;
 
+    ///long long int
     long long int dx = 0;
     // ss >> dx; --> Wrong
     /*
@@ -37,8 +40,10 @@ int to string
     cout << dx / 5 << endl;
     
 /****************************************/
-string to int
+    //int or long to string
+    
     int a = 12;
+    
     ostringstream str1; 
     str1 << a;
     string sa = str1.str();
@@ -50,7 +55,7 @@ string to int
     string sb = str2.str();
     cout << sb <<"\n";
 /****************************************/
-Other method :
+    Other method :
     string s = "iooc";
     s = s + "op"; // Time complexity : O(M) where M is the length of new string
     Bad practice : s = '1' + s; // Time complexity : O(N) where M is the length of s
@@ -74,3 +79,28 @@ Other method :
     /// digit to char
     cout << char(0+48) << endl; /// 0
     cout << char(2+48) << endl; /// 2
+    
+    // splitilng string
+    string line = "GeeksForGeeks is a must try";
+    vector <string> tokens;
+    stringstream check(line);
+    string intermediate;
+    while(getline(check, intermediate, ' '))
+    {
+        tokens.push_back(intermediate);
+    }
+    for(int i = 0; i < tokens.size(); i++)
+        cout << tokens[i] << '\n';
+     
+    cout << "--- second line ---" << endl;
+    
+    string line1 = "Codeforces is a must try";
+    vector <string> tokens1(100);
+    stringstream check1(line1);
+    string intermediate1;
+    int k = -1;
+    while(getline(check1, intermediate1, ' '))
+    {
+        tokens1[++k] = intermediate1;
+    }
+    for(int i = 0;i<=k;i++) cout << tokens1[i] << "\n";
