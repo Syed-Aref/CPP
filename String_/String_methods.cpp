@@ -34,6 +34,14 @@ int stringToInt(string sn) {
     return x;
 }
 
+string charToString(char c){
+    string s;
+    stringstream ss;
+    ss << c;
+    ss >> s;
+    return s;
+}
+
 int main()
 {
     ios::sync_with_stdio(false);
