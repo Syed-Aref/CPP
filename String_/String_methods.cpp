@@ -10,10 +10,8 @@ typedef long long int lli;
 #define sec second
 #define line_ "\n"
 
-
-
+/// string breaking
 vector<string> stringBreaker(string& line,char& c) {
-
 
     vector <string> tokens;
     stringstream check(line);
@@ -26,7 +24,7 @@ vector<string> stringBreaker(string& line,char& c) {
 
 }
 
-
+/// string to int
 int stringToInt(string sn) {
     stringstream ss(sn);
     int x = 0;
@@ -34,6 +32,15 @@ int stringToInt(string sn) {
     return x;
 }
 
+/// int to string
+string intToString(int a){
+    stringstream ss;
+    ss << a;
+    string str = ss.str();
+    return str;
+}
+
+/// char to string
 string charToString(char c){
     string s;
     stringstream ss;
