@@ -3,65 +3,82 @@ using namespace std;
 int main()
 {
     vector<int> v{11,12,34,67,89,45,23,12,45,78};
+    /**
+    Other ways to initialize:
+    1) vector<int> v;
+    2) vector<int> v(10):
+       /// Now vector v will be of 10 length(All 10 slots) initialized by zero
+    **/
+    
     set<int> s{11,12,134,156,190};
-    map<int, int> m;
-    m[1] = 9, m[12] = 89, m[4] = 56, m[7] = 89, m[15] = 78, m[11] = 110;
+    /**
+    Other ways to initialize:
+    set<int> s;
+    **/
+    
+    map<int, int> m; 
+    ///map<key,value>
+    ///To insert <key,value> pair
+    m[1] = 9, m[12] = 89, m[4] = 56, m[7] = 89, m[15] = 78, m[11] = 110; ///m[key] = pair
     
     
     /*** vector ***/
-    auto it_lb = lower_bound(v.begin(),v.end(),44); ///iterator
+    Lower bound: auto it_lb = lower_bound(v.begin(),v.end(),44); ///iterator
     ///O(log(N))
     
-    auto it_ub = upper_bound(v.begin(),v.end(),44); ///iterator
+    Upper bound: auto it_ub = upper_bound(v.begin(),v.end(),44); ///iterator
     ///O(log(N))
     
-    v.clear(); ///void
+    Clearing: v.clear(); ///void
     ///O(1)
     
     
     
     /*** set ***/
-    s.insert(target) //void
+    Inerting: s.insert(element); //void
     ///O(log(N)
     
-    auto it_lb = s.lower_bound(element); ///iterartor
+    Lower bound: auto it_lb = s.lower_bound(element); ///iterartor
     ///O(log(N))
 
-    auto it_ub = s.upper_bound(element); ///iterator
+    Upper bound: auto it_ub = s.upper_bound(element); ///iterator
     ///O(log(N))
 
-    s.clear(); //void
+    Clearing: s.clear(); //void
     ///O(1)
     
-    s.count(element) ///int; 1 if present , else 0
+    Searching exsitence: s.count(element) ///int; 1 if present , else 0
     ///O(log(N))
     
-    s.find(element) ///iterator
+    Finding: s.find(element) ///iterator
     ///O(log(N))
     
-    s.erase(any_value) ///void [any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
+    Erasing element: s.erase(any_value) ///void [any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
     ///O(log(N)) ?
     
     /*** map ***/
-    mp.insert(target) //void
+    Inerting: 1)m.insert( make_pair(key,value) );///void
+    ///O(log(N)
+    2)m[key] = value;///void
     ///O(log(N)
     
-    auto it_lb = mp.lower_bound(element); ///iterartor
+    
+    Lower bound: auto it_lb = m.lower_bound(element); ///iterartor
     ///O(log(N))
 
-    auto it_ub = mp.upper_bound(element); ///iterator
+    Upper bound: auto it_ub = m.upper_bound(element); ///iterator
     ///O(log(N))
 
-    mp.clear(); //void
+    Clearing: m.clear(); //void
     ///O(1)
     
-    mp.count(element) ///int; 1 if present , else 0
+    Searching exsitence: m.count(key) ///int; 1 if present , else 0
     ///O(log(N))
     
-    mp.find(element) ///iterator
+    Findig: m.find(key) ///iterator
     ///O(log(N))
     
-    // *iterator = pair
+    //*iterator = pair
     
     
     */
@@ -74,7 +91,7 @@ int main()
     back(): last element // O(1)
     front(): last element // O(1)
     pop_back(): void(removes last elem) // O(1)
-    push_back(): void(inserts at the end of vector) // O(1)
+    push_back(element): void(inserts at the end of vector) // O(1)
 
 
     /// List
@@ -82,27 +99,27 @@ int main()
     pop_front( ) : void(removes first elem) // O(1)
 
     /// Stack
-    push( ): same as vector
-    pop( ): returns last element and removes as well // O(1)
-    top( ): returns last element // O(1)
-    empty( ): bool(checks if empty) ///O(1).
-    size( ): returns the size of stack ///O(1).
+    push(element): same as vector
+    pop(): returns last element and removes as well // O(1)
+    top(): returns last element // O(1)
+    empty(): bool(checks if empty) ///O(1).
+    size(): returns the size of stack ///O(1).
 
     /// Queue
-    push( ): inserts a new element at the last 
-    pop( ): removes last element
+    push(element): inserts a new element at the last 
+    pop(): removes last element
     front() : returns front element
-    back( ): returns last element 
-    empty( ): bool(checks if empty)
-    size( ): returns the size of queue
+    back(): returns last element 
+    empty(): bool(checks if empty)
+    size(): returns the size of queue
     **/
     
     /// Priority Queue
-    push( ): inserts a new element /// O(logN)
-    pop( ): removes biggest element /// O(logN)
-    top( ): returns biggest element // O(1)
-    empty( ): bool(checks if empty) ///O(1).
-    size( ): returns the size of queue ///O(1).
+    push(element): inserts a new element /// O(logN)
+    pop(): removes biggest element /// O(logN)
+    top(): returns biggest element // O(1)
+    empty(): bool(checks if empty) ///O(1).
+    size(): returns the size of queue ///O(1).
     **/
     
     /// deque
