@@ -5,12 +5,12 @@ int main()
 {
 
     int a = 34;
-    int* pA = &a;
-    //int *pA = &a; is same as line 7
+    int *pA = &a;
+    //int* pA = &a; is same as line 7
     cout << "Value : " << a << " Memory : " << pA<<"\n";
     
     double d = 69.69;
-    double* pD = &d;
+    double *pD = &d;
     cout << "Value : " << d << " Memory : " << pD << "\n";
 
     //De-referencing
@@ -36,11 +36,11 @@ typedef long long int lli;
 #define sec second
 #define line "\n"
 
-void f1(int* p) {
+void f1(int *p) {
     *p = *p + 2;
 }
 
-void f2(int& p) {
+void f2(int &p) {
     p = p + 2;
 }
 
