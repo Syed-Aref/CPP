@@ -109,7 +109,7 @@ int main()
 
     /// Queue
     push(element): inserts a new element at the last 
-    pop(): removes last element
+    pop(): removes front element
     front() : returns front element
     back(): returns last element 
     empty(): bool(checks if empty)
