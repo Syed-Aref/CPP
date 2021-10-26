@@ -114,7 +114,7 @@ int main()
     back(): returns last element 
     empty(): bool(checks if empty)
     size(): returns the size of queue
-    **/
+
     
     /// Priority Queue
     push(element): inserts a new element /// O(logN)
@@ -122,7 +122,9 @@ int main()
     top(): returns biggest element // O(1)
     empty(): bool(checks if empty) ///O(1).
     size(): returns the size of queue ///O(1).
-    **/
+    //Note: Priority Queue in cpp is by default max priority queue
+    //Min priority queue: priority_queue<int , vector<int> , greater<int> > pq2;
+    
     
     /// deque
     void : push_back(element) , push_front(element) , pop_back() , pop_front()
