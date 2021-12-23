@@ -5,8 +5,8 @@ int main()
 {
 
     int a = 34;
-    int *pA = &a;
-    //int* pA = &a; is same as line 7
+    int *pA = &a;    //int* pA = &a; is same 
+
     cout << "Value : " << a << " Memory : " << pA<<"\n";
     
     double d = 69.69;
