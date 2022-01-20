@@ -52,9 +52,9 @@ int main()
     
     Finding: s.find(element) ///iterator
     ///O(log(N))
-    ///For details: https://github.com/Syed-Aref/CPP/blob/master/DS/find(vector%2Cset%2Cmap)
     
-    Erasing element: s.erase(any_value) ///void [any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
+    Erasing element: s.erase(any_value) ///void 
+    ///[any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
     ///O(log(N)) ?
     
     /*** map ***/
@@ -78,7 +78,6 @@ int main()
     
     Findig: m.find(key) ///iterator
     ///O(log(N))
-    ///For details: https://github.com/Syed-Aref/CPP/blob/master/DS/find(vector%2Cset%2Cmap)
     
     //*iterator = pair
     
