@@ -85,7 +85,7 @@ getline(cin,s);
     vector <string> tokens;
     stringstream check(line);
     string intermediate;
-    while(getline(check, intermediate, ' '))
+    while(getline(check, intermediate, " "))
     {
         tokens.push_back(intermediate);
     }
