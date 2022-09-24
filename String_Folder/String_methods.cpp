@@ -11,10 +11,10 @@ typedef long long int lli;
 #define line_ "\n"
 
 /// string breaking
-vector<string> stringBreaker(string& line,char& c) {
+vector<string> stringBreaker(string& line1,char& c) {
 
     vector <string> tokens;
-    stringstream check(line);
+    stringstream check(line1);
     string intermediate;
     while(getline(check, intermediate, c))
     {
