@@ -26,9 +26,10 @@ vector<string> splitString(string str,char breaker)
             s = s + x;
         }
     }
+    if(s.length() > 0)ret.push_back(s);
+
     return ret;
 }
-
 
 /// string to int
 int stringToInt(string sn) {
