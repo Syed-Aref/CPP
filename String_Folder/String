@@ -80,27 +80,4 @@ getline(cin,s);
     cout << char(0+48) << endl; /// 0
     cout << char(2+48) << endl; /// 2
     
-    // splitilng string
-    string line = "GeeksForGeeks is a must try";
-    vector <string> tokens;
-    stringstream check(line);
-    string intermediate;
-    while(getline(check, intermediate, " "))
-    {
-        tokens.push_back(intermediate);
-    }
-    for(int i = 0; i < tokens.size(); i++)
-        cout << tokens[i] << '\n';
-     
-    cout << "--- second line ---" << endl;
     
-    string line1 = "Codeforces is a must try";
-    vector <string> tokens1(100);
-    stringstream check1(line1);
-    string intermediate1;
-    int k = -1;
-    while(getline(check1, intermediate1, ' '))
-    {
-        tokens1[++k] = intermediate1;
-    }
-    for(int i = 0;i<=k;i++) cout << tokens1[i] << "\n";
