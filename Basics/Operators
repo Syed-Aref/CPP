@@ -1,0 +1,6 @@
+Arithmetic: +, -, *, /, %
+Increment, decrement: x++(POST INCREMENT) , ++x(PRE INCREMENT) , x--(POST DECCREMENT) , --x(PREE DECREMENT)
+Assignment: = , += , -= , *= , /= , %=
+Relational: == , != , > , >= , < , <=
+Logical: && , || , !(True/false or 0/1)
+Bitwise: & , | , ^(XOR) , ~(ONE'S COMPLEMENT) , << , >>
