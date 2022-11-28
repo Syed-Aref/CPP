@@ -29,130 +29,144 @@ int main() {
 
 
     /*** vector ***/
-    ///Lower bound:
-    auto vector_lb_it = lower_bound(v.begin(),v.end(),44); ///iterator
-    ///O(log(N))
+    ///push_back(void, O(1))
+    v.push_back(22);
 
-    ///Upper bound:
+    ///sort(void, O(N*LOG(N)))
+    sort(v.begin() , v.end());
+    for(auto ele : v) cout << ele << " ";
+    cout << endl;
+
+    ///Lower bound(iterator, LOG(N))
+    auto vector_lb_it = lower_bound(v.begin(),v.end(),44);
+    if(vector_lb_it != v.end()) cout << "*vector_lb_it = " << *vector_lb_it << endl;
+    cout << "Lower bound index: " << vector_lb_it - v.begin() << endl;
+
+
+    ///Upper bound(iterator, LOG(N))
     auto vector_ub_it = upper_bound(v.begin(),v.end(),44); ///iterator
-    ///O(log(N))
+    if(vector_ub_it != v.end()) cout << "*vector_ub_it = " << *vector_ub_it << endl;
+    cout << "Upper bound index: " << vector_ub_it - v.begin() << endl;
 
-    ///Clearing:
-    v.clear(); ///void
-    ///O(1)
+    ///First element(element, O(1))
+    cout << v.front() << endl;
+
+    ///Last element(element, O(1))
+    cout << v.back() << endl;
+
+    ///Removing last element(void, O(1))
+    v.pop_back();
+    for(auto ele : v) cout << ele << " ";
+    cout << endl;
+
+    ///Clearing(void, O(1))
+    v.clear();
+
 
 
 
     /*** set ***/
-    ///Inerting:
-    s.insert(element); //void
-    ///O(log(N)
+    ///Inerting(void, O(LOG(N)))
+    s.insert(element);
 
-    ///Lower bound:
-    auto set_lb_it = s.lower_bound(element); ///iterartor
-    ///O(log(N))
+    ///Lower bound(iterator, LOG(N))
+    auto set_lb_it = s.lower_bound(element);
+    if(set_lb_it != s.end()) cout << "*set_lb_it = " << *set_lb_it << endl;
 
-    ///Upper bound:
-    auto set_ub_it = s.upper_bound(element); ///iterator
-    ///O(log(N))
+    ///Upper bound(iterator, LOG(N))
+    auto set_ub_it = s.upper_bound(element);
+    if(set_ub_it != s.end()) cout << "*set_ub_it = " << *set_ub_it << endl;
 
-    ///Clearing:
-    s.clear(); ///void
-    ///O(1)
 
-    ///Searching exsitence:
+    ///Searching exsitence(void, O(log(N)))
     s.count(element); ///int; 1 if present , else 0
-    ///O(log(N))
 
-    ///Finding:
-    s.find(element); ///iterator
-    ///O(log(N))
+    ///Finding(iterator, O(log(N)))
+    s.find(element);
 
-    ///Erasing element:
-    s.erase(any_value); ///void
+    ///Erasing element(void, O(log(N)))
+    s.erase(any_value);
     ///[any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
-    ///O(log(N)) ?
+
+    ///Clearing(void, O(1))
+    s.clear();
 
     /*** map ***/
-    ///Inerting:
-    ///1)
-    m.insert( make_pair(int_key,string_value) );///void
-    ///O(log(N)
-    ///2)
-    m[key] = value;///void
-    ///O(log(N)
+
+    ///Inserting((void, O(log(N)))
+    /**1)**/ m.insert( make_pair(int_key,string_value) );
+    /**2)**/ m[key] = string_value;
 
 
-    ///Lower bound:
-    auto map_lb_it = m.lower_bound(key); ///iterartor(*iterator = pair)
-    ///O(log(N))
+    ///Lower bound(iterator, LOG(N))
+    auto map_lb_it = m.lower_bound(key);
+    if(map_lb_it!=m.end()) cout << "(" << (*map_lb_it).first << " , " << (*map_lb_it).second << ")" << endl;
 
-    ///Upper bound:
-    auto map_ub_it = m.upper_bound(key); ///iterator
-    ///O(log(N))
+    ///Upper bound(iterator, LOG(N))
+    auto map_ub_it = m.upper_bound(key);
 
-    ///Clearing:
-    m.clear(); ///void
-    ///O(1)
+    ///Searching exsitence(void, O(log(N)))
+    m.count(key);
 
-    ///Searching exsitence:
-    m.count(key); ///int; 1 if present , else 0
-    ///O(log(N))
+    ///Findig(iterator, O(log(N)))
+    m.find(key);
 
-    ///Findig:
-    m.find(key); ///iterator
-    ///O(log(N))
+    ///Clearing(void, O(1))
+    m.clear();
 
 
     /// ============================================================================================================ ///
 
-    /**
-    Also,
-    /// Vector
-    back(): last element // O(1)
-    front(): last element // O(1)
-    pop_back(): void(removes last elem) // O(1)
-    push_back(element): void(inserts at the end of vector) // O(1)
+    /**List**/
+    list<int> l = {1,44,1,3,1};
+    for(auto i : l) cout << i << " ";
+    cout << endl;
 
+    ///All methods are same as vector, with one additional method.
+    ///Removing first element
+    l.pop_front();
+    for(auto i : l) cout << i << " ";
+    cout << endl;
 
-    /// List
-    Same methods in vector,in addition
-    pop_front( ) : void(removes first elem) // O(1)
+    /**Stack**/
+    stack<int> stk;
 
-    /// Stack
-    push(element): same as vector
-    pop(): returns last element and removes as well // O(1)
-    top(): returns last element // O(1)
-    empty(): bool(checks if empty) ///O(1).
-    size(): returns the size of stack ///O(1).
+    ///pushing(void, O(1))
+    stk.push(21);
+    stk.push(3);
+    stk.push(4);
+    stk.push(7);
 
-    /// Queue
-    push(element): inserts a new element at the last
-    pop(): removes front element
-    front() : returns front element
-    back(): returns last element
-    empty(): bool(checks if empty)
-    size(): returns the size of queue
+    ///size(int, O(1))
+    ///last element(element, O(1))
+    ///removing last element(void, O(1))
+    while(stk.size()!=0){
+        cout << stk.top() << " ";
+        stk.pop();
+    }
+    cout << endl;
 
+    /**Queue**/
+    queue<int> q;
 
-    /// Priority Queue
-    push(element): inserts a new element /// O(logN)
-    pop(): removes biggest element /// O(logN)
-    top(): returns biggest element // O(1)
-    empty(): bool(checks if empty) ///O(1).
-    size(): returns the size of queue ///O(1).
-    //Note: Priority Queue in cpp is by default max priority queue
-    //Min priority queue: priority_queue<int , vector<int> , greater<int> > pq2;
+    ///push(void, O(1))
+    q.push(10);
+    q.push(20);
+    q.push(40);
+    q.push(36);
 
+    ///first element(element, O(1))
+    cout << q.front() << endl;
 
-    /// deque
-    void : push_back(element) , push_front(element) , pop_back() , pop_front()
-    // O(1)
-    back() : returns last element
-    // O(1)
-    front() : returns front element
-    // O(1)
-    size( ): returns the size of deque
-    // O(1).
-    **/
+    ///last element(element, O(1))
+    cout << q.back() << endl;
+
+    ///size(int, O(1))
+    ///removing first element(void, O(1))
+    while(q.size()!=0){
+        cout << q.front() << " ";
+        q.pop();
+    }
+    cout << endl;
+
 }
