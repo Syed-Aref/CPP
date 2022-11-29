@@ -59,7 +59,7 @@ int main() {
     for(auto ele : v) cout << ele << " ";
     cout << endl;
 
-    ///Clearing(void, O(1))
+    ///Clearing(void, O(N))
     v.clear();
 
 
@@ -88,7 +88,7 @@ int main() {
     s.erase(any_value);
     ///[any value(int,char or others based on the set , that may present or not present in that array) can be given in parameter]
 
-    ///Clearing(void, O(1))
+    ///Clearing(void, O(N))
     s.clear();
 
     /*** map ***/
@@ -111,7 +111,7 @@ int main() {
     ///Findig(iterator, O(log(N)))
     m.find(key);
 
-    ///Clearing(void, O(1))
+    ///Clearing(void, O(N))
     m.clear();
 
 
