@@ -1,0 +1,5 @@
+max(a,b)
+min(a,b)
+swap(a,b)
+__gcd(a,b)
+log(a) [Natutal logarithm, with base e(e = 2.71..)
