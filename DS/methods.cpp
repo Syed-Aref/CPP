@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int element = 44 , any_value = 23, key = 131, value = 1312, int_key = 28;
+int element = 44 , any_value = 23, key = 131, value = 1312, int_key = 28, any_key_value = 12;
 string string_value = "name";
 pair<int, string> pair_element = {1313,"fine"};
 
@@ -109,6 +109,12 @@ int main() {
 
     ///Findig(iterator, O(log(N)))
     m.find(key);
+    
+    ///Erasing element(void, O(log(N)))
+    m.erase(any_key_value);
+    ///[any key value(int,char or others based on the set) , that may present or not present in that map) can be given in parameter]
+    cout << "======================" << endl;
+    for(auto p : m) cout << "(" << p.first << ", " << p.second << ")" << endl;
     
     ///Lower bound(iterator, LOG(N))
     auto map_lb_it = m.lower_bound(key);
