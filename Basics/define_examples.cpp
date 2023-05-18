@@ -3,7 +3,7 @@ using namespace std;
 
 /**
 Macro: Piece of code in program that is replaced by value of the
-macro. It is defined by #define directivre/ pre-processor.
+macro. It is defined by #define directive/ pre-processor.
 
 
 #define: Use to give an alternate name to a value.
