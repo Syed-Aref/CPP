@@ -11,14 +11,11 @@ typedef long long int lli;
 #define line_ "\n"
 
 /// string breaking
-vector<string> splitString(string str,char breaker)
-{
+vector<string> splitString(string str,char breaker) {
     vector<string> ret;
     string s = "";
-    for (auto x : str)
-    {
-        if (x == breaker)
-        {
+    for (auto x : str) {
+        if (x == breaker) {
             if(s.length() > 0)ret.push_back(s);
             s = "";
         }
@@ -26,6 +23,7 @@ vector<string> splitString(string str,char breaker)
             s = s + x;
         }
     }
+    
     if(s.length() > 0)ret.push_back(s);
 
     return ret;
@@ -40,7 +38,7 @@ int stringToInt(string sn) {
 }
 
 /// int to string
-string intToString(int a){
+string intToString(int a) {
     stringstream ss;
     ss << a;
     string str = ss.str();
@@ -48,7 +46,7 @@ string intToString(int a){
 }
 
 /// char to string
-string charToString(char c){
+string charToString(char c) {
     string s;
     stringstream ss;
     ss << c;
@@ -56,8 +54,7 @@ string charToString(char c){
     return s;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
