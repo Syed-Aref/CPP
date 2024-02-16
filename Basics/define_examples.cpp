@@ -35,8 +35,7 @@ Structure: #define macro_name macro_value
 ///Naming return type functions
 #define AREA(L,B) (L*B)
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
