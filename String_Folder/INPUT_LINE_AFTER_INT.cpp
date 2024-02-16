@@ -15,8 +15,7 @@ typedef long long int lli;
 const int nmax = 1E5 + 5;
 const lli mod = 1E9 + 7;
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -25,7 +24,7 @@ int main()
     int t = 1;
     ///cin >> t;
 
-    while(t-->0){
+    while(t-->0) {
         int n;
         string s;
 
