@@ -2,21 +2,32 @@
 
 -------------------------------------***-------------------------------------
 
-#include <iostream>
-#include <cstring>
+#include <bits/stdc++.h>
 using namespace std;
-class Book
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class Book {
     public:
         string author;
         string bookName;
-        Book()
-        {
+        Book() {
           cout<<"Please intitalize Author and Book-name"<<"\n";
         }
 };
-int main()
-{
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     Book book1;
     return 0;
 }
@@ -29,22 +40,32 @@ Please intitalize Author and Book-name
 -------------------------------------***-------------------------------------
 
 
-#include <iostream>
-#include <cstring>
+#include <bits/stdc++.h>
 using namespace std;
-class Book
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class Book {
     public:
         string author;
         string bookName;
-        Book(string aAuthor,string aBookName)
-        {
+        Book(string aAuthor,string aBookName) {
           author = aAuthor;
           bookName = aBookName;
         }
 };
-int main()
-{
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     Book book1("Mario Pujo","The godfather");
     cout<<book1.bookName<<" is written by "<<book1.author<<endl;
     return 0;
@@ -59,33 +80,41 @@ The godfather is written by Mario Pujo
 -------------------------------------***-------------------------------------
 
 
-#include <iostream>
-#include <cstring>
+#include <bits/stdc++.h>
 using namespace std;
-class Book
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class Book {
     private:
         int rating;  
     public:
         string author;
         string bookName;
-        Book(string aAuthor,string aBookName,int num)
-        {
+        Book(string aAuthor,string aBookName,int num) {
           author = aAuthor;
           bookName = aBookName;
           rating = num;
         }
-        int getRating()
-        {
+        int getRating() {
           return rating;
         }
-        void setRating(int n)
-        {
+        void setRating(int n) {
           rating = n;
         }
 };
-int main()
-{
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     Book book1("Mario Pujo","The godfather",8);
     cout<<book1.bookName<<" is written by "<<book1.author<<endl;
     //cout<<"Rating is: "<<book1.rating<<"\n";-->Error,can not access private field in any other class except the main body class//
@@ -112,18 +141,28 @@ Rating is: 9
 #include <bits/stdc++.h>
 using namespace std;
 
-class s1{
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class s1 {
     public :
         int s;
-        s1(int s_){
+        s1(int s_) {
             s = s_;
         }
 
 };
-class s2{
+
+class s2 {
     public :
         int s;
-        s2(int s_){
+        s2(int s_) {
             s = s_;
         }
         s2() {
@@ -133,8 +172,7 @@ class s2{
 };
 
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -170,14 +208,3 @@ int main()
     s2* c2[6];
 
 }
-
-
-
-
-
-
-
-
-
-
-
