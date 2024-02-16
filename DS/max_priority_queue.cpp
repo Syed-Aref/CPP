@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
 
     /**Max priority queue**/
     priority_queue<int> q;
