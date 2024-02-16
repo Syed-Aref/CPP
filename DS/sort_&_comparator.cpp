@@ -16,7 +16,7 @@ bool sort_func1(int x, int y){ /// a1,a2
 bool sort_func2(int x, int y){ /// a1,a2
     return x < y; /// a1 < a2
 }
-int main(){
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
