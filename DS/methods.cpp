@@ -2,6 +2,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
 
 int element = 44 , any_value = 23, key = 131, value = 1312, int_key = 28, any_key_value = 12;
 string string_value = "name";
@@ -9,6 +17,10 @@ pair<int, string> pair_element = {1313,"fine"};
 
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     vector<int> v{11,12,34,67,89,45,23,12,45,78};
     /**
     Other ways to initialize:
