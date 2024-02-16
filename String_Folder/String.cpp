@@ -1,9 +1,9 @@
 string s = "Aref";
-cout<<s[2]<<endl; // will print the third character( 0 based index )which is 'e'//
+cout<<s[2]<<endl; /// will print the third character( 0 based index )which is 'e'//
 s[0] = 'a';
-cout<< s <<endl;// output: aref //
+cout<< s <<endl; /// output: aref //
  
-Length: string_var.length(); // size_t variable(Also works as int)
+Length: string_var.length(); /// size_t variable(Also works as int)
 string_var.push_back(character);
 
 
