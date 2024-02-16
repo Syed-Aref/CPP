@@ -1,38 +1,42 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
-class General
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class General {
     public :
-    void gen()
-    {
+    void gen() {
         cout << "This is general" << endl;
     }
-    void hi()
-    {
+    void hi() {
         cout << "hi" << endl;
     }
-    void bye()
-    {
+    void bye() {
         cout << "bye" << endl;
     }
 };
-class General1 : public General
-{
+
+class General1 : public General {
     public :
-    void gen1()
-    {
+    void gen1() {
         cout << "This is general1" << endl;
     }
-    void hi()
-    {
+    void hi() {
         cout << "hi.this is general1" << endl;
     }
 };
 
-int main()
-{
-    
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
     General g;
     g.gen();
@@ -43,7 +47,8 @@ int main()
     g1.gen1();
     g1.hi();
     g1.bye();
-}    
+}   
+/**
 Output :
 This is general
 hi
@@ -51,43 +56,50 @@ bye
 This is general1
 hi.this is general1
 bye
+**/
 
----------------------------------------------------
-//However
-#include <iostream>
-#include <vector>
+/// ---------------------------------------------------
+/// However
+#include <bits/stdc++.h>
 using namespace std;
-class General
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class General {
     public :
-    void gen()
-    {
+    void gen() {
         cout << "This is general" << endl;
     }
-    void hi()
-    {
+    void hi() {
         cout << "hi" << endl;
     }
-    void bye()
-    {
+    void bye() {
         cout << "bye" << endl;
     }
 };
-class General1 : public General
-{
+
+class General1 : public General {
     public :
-    void gen1()
-    {
+    void gen1() {
         cout << "This is general1" << endl;
     }
-    void hi()
-    {
+    void hi() {
         cout << "hi.this is general1" << endl;
     }
 };
 
-int main()
-{ 
+int main() { 
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     vector<General*> g;
     g.push_back( new General() );
     g.push_back(new General1());
@@ -101,6 +113,7 @@ int main()
     g[1]->bye();
     
 }
+/**
 Output :
 This is general
 hi
@@ -108,13 +121,15 @@ bye
 This is general
 hi
 bye
+ **/
 
 
 
 
----------------------------------------------------
-// To sove this we have polymorphism
-// Before that we should understand reference class
+/// ---------------------------------------------------
+/// To sove this we have polymorphism
+/// Before that we should understand reference class
+/*
     SEG : 3(From SEG : 1)
     General& and_g_1 = g;
     General& and_g_2 = g1;
@@ -126,39 +141,48 @@ bye
     // (*) &super_class -->  sub_class    : OK
     // (*) &sub_class -->  super_class    : WRONG
     // (*) &sub_class -->  sub_class       : OK
+*/
 
-//Polymorphism exemples :
-(*)Ex:1
-#include <iostream> 
+// /Polymorphism exemples :
+/// Ex:1
+#include <bits/stdc++.h>
 using namespace std;
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
 
 class Base {
 public:
     string name;
-    Base(string n)
-    {
+    Base(string n) {
         name = n;
     }
-    virtual void show()
-    {
+    virtual void show() {
         cout << name << " In Base \n";
     }
 };
 
 class Derived : public Base {
 public:
-    Derived(string n) : Base(n)
-    {
+    Derived(string n) : Base(n) {
 
     }
-    void show()
-    {
+    void show() {
         cout << name << " In Derived \n";
     }
 };
 
-int main(void)
-{
+int main(void) {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     Base* base = new Base("x");
 
     base->show(); //x In Base
@@ -168,42 +192,54 @@ int main(void)
 
     return 0;
 }
-(*)Ex 2 :
-#include <iostream>
+
+/// Ex 2 :
+#include <bits/stdc++.h>
 using namespace std;
-class Name
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class Name {
 public:
     string nm; // string nm = "0";--> can be given value at the begining as well
-    Name(string n)
-    {
+    Name(string n) {
         nm = n;
     }
-    Name()
-    {
+    Name() {
         nm = "null";
     }
-    virtual void display()
-    {
+    virtual void display() {
         cout << nm << endl;
     }
 };
-class SmartName : public Name
-{
+class SmartName : public Name {
 public:
-    SmartName() : Name() {}
-    SmartName(string x) : Name(x) {}
-    void input(string s)
-    {
+    SmartName() : Name() {
+        
+    }
+    SmartName(string x) : Name(x) {
+        
+    }
+    void input(string s) {
         nm = s;
     }
-    void display()
-    {
+    void display() {
         cout << "His name is " << nm << endl;
     }
 };
-int main()
-{
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     SmartName snm;
     snm.display(); //His name is null
     snm.Name::display(); //null
@@ -214,5 +250,4 @@ int main()
     SmartName snm1("Ahmed");
     snm1.Name::display(); //Ahmed
     snm1.display(); //His name is Ahmed
-
 }
