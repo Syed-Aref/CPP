@@ -1,6 +1,5 @@
 int a;
-while(cin >> a)
-{
+while(cin >> a) {
 
  /// Do coding
 
