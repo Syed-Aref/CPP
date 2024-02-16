@@ -1,28 +1,36 @@
-#include <iostream>
-#include <cstring>
+#include <bits/stdc++.h>
 using namespace std;
-class Chef
-{
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class Chef {
     public:
-        void makeChicken()
-        {
+        void makeChicken() {
           cout<<"Chef is making chicken"<<endl;
         }
-        void serveDrinks()
-        {
+        void serveDrinks() {
           cout<<"Chef is serving drinks"<<endl;
         }
 };
-class ItalianChef : public Chef
-{
+class ItalianChef : public Chef {
   public:
-      void cookPasta()
-      {
+      void cookPasta() {
          cout<<"Italian Chef is cooking pasta"<<endl;
       }
 };
-int main()
-{
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     Chef chef1;
     ItalianChef ic1;
 
@@ -45,41 +53,45 @@ Italian Chef is cooking pasta
 
 
 --------------------------**--------------------------
-#OVER-RIDE Example
-#include <iostream>
-#include <cstring>
-using namespace std;
-class Chef
-{
+/// OVER-RIDE Example
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
+class Chef {
     public:
-        void makeChicken()
-        {
+        void makeChicken() {
           cout<<"Chef is making chicken"<<endl;
         }
-        void serveDrinks()
-        {
+        void serveDrinks() {
           cout<<"Chef is serving drinks"<<endl;
         }
-        void cookSpecialDish()
-        {
+        void cookSpecialDish() {
           cout<<"Chef is cooking special dish"<<endl;
         }
 };
-class ItalianChef : public Chef
-{
+
+class ItalianChef : public Chef {
   public:
-      void cookPasta()
-      {
+      void cookPasta() {
          cout<<"Italian Chef is cooking pasta"<<endl;
       }
-      void cookSpecialDish()
-      {
+      void cookSpecialDish() {
           cout<<"Italian Chef is cooking special dish.The dish is pizza"<<endl;
       }
 
 };
-int main()
-{
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     Chef chef1;
     ItalianChef ic1;
 
