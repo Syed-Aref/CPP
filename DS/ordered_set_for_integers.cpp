@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
 
 ///For ordered set of integers
 #include <ext/pb_ds/assoc_container.hpp>
@@ -11,8 +19,11 @@ using namespace __gnu_pbds;
 
 typedef tree<int , null_type , less<int> , rb_tree_tag , tree_order_statistics_node_update> ordered_set;
 
-int main()
-{
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     ordered_set p;
 
     p.insert(22);
