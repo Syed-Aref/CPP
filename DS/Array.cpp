@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
   int n[] = {4,5,6,12};
   int size = *(&n + 1) - n; // size = 4 //
   cout<< size <<"\n";
