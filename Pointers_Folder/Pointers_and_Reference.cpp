@@ -1,6 +1,14 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
 
 void f1(int x) {
     cout << "Memory address of x = " << &x << endl;
@@ -17,9 +25,11 @@ void f3(int& x) {
     x = x + 8;
 }
 
-int main()
-{
-
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     ///Pointer: memory address of a variable
     ///Pointer referencing: assigning memory address to a pointer variable
     int a = 34;
@@ -81,5 +91,4 @@ int main()
     cout << "a3 = " << a3 << endl;
     f3(a3);
     cout << "a3 = " << a3 << endl;
-
 }
