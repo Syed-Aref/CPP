@@ -1,7 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
+
 int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(NULL);
+  cout.tie(NULL);
+  
   int n[] = {4,5,6,12};
   int size = *(&n + 1) - n; // size = 4 //
   cout<< size <<"\n";
@@ -9,22 +22,19 @@ int main() {
   int arr1[4] = {4,6,1,2}; // not more than 4 elements
   cout<<"\n";
   cout<<arr1[0];
-  for(int i = 1;i<*(&arr1 + 1) - arr1;i++)
-    cout<<" "<<arr1[i];
+  for(int i = 1;i<*(&arr1 + 1) - arr1;i++) cout<<" "<<arr1[i];
   cout<<"\n";
   int arr2[5] = {1,5,6};
   //arr2[3]=arr2[4]=0
   cout<<"\n";
   cout<<arr2[0];
-  for(int i = 1;i<*(&arr2 + 1) - arr2;i++)
-    cout<<" "<<arr2[i];
+  for(int i = 1;i<*(&arr2 + 1) - arr2;i++) cout<<" "<<arr2[i];
   cout<<"\n";
   arr2[3] = 10;
   arr2[4] = 12;
   cout<<"\n";
   cout<<arr2[0];
-  for(int i = 1;i<*(&arr2 + 1) - arr2;i++)
-    cout<<" "<<arr2[i];
+  for(int i = 1;i<*(&arr2 + 1) - arr2;i++) cout<<" "<<arr2[i];
   cout<<"\n";
   //Only Declare a new Array
   int newArr[10];
@@ -63,16 +73,30 @@ int dynArr[5][3] = {
                         {       47,       89,       67},          //Row no:4(3)
                         {       10,       30,       50}           //Row no:5(4)
                       };
-}
+};
 
 
 
 /// Declaring array outside main-method and inside main method assigns different value
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long int lli;
+
+#define mpr make_pair
+#define pbk push_back
+#define psh push
+#define fir first
+#define sec second
+#define line "\n"
 
 int arr1[20];
 
-int main()
-{
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+  
     int arr2[20];
     
     for(int i = 0;i<20;i++) cout << arr1[i] << " ";
