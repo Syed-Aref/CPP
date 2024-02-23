@@ -115,4 +115,6 @@ int main() {
 
         cout << level << endl;
     }
+
+    return 0;
 }

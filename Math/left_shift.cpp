@@ -14,7 +14,6 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(NULL);
 
-
     int n;
     /// Indexing: ...,4,3,2,1,0
     n = 0;
@@ -29,5 +28,5 @@ int main() {
     n = 3;
     cout << (1<<n) << endl; /// Binary: 1000
 
-
+    return 0;
 }

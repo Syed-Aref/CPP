@@ -10,8 +10,6 @@ typedef long long int lli;
 #define sec second
 #define line "\n"
 
-
-
 int main() {
 ios::sync_with_stdio(false);
     cin.tie(NULL);
@@ -24,4 +22,6 @@ ios::sync_with_stdio(false);
     x = 256, base = 2;
     cout << log(x) << endl;
     cout << log(x) / log(base) << endl;
+
+    return 0;
 }

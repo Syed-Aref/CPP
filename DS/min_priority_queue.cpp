@@ -14,7 +14,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     /**Min priority queue**/
     priority_queue<int , vector<int> , greater<int>> q;
 
@@ -29,7 +29,6 @@ int main() {
     ///maximum element(element, O(log(n)))
     cout << q.top() << endl;
 
-
     ///size(int, O(1))
     ///removing first element(void, O(log(n)))
     while(q.size()!=0){
@@ -37,4 +36,6 @@ int main() {
         q.pop();
     }
     cout << endl;
+
+    return 0;
 }

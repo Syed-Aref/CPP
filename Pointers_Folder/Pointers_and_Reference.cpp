@@ -29,7 +29,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     ///Pointer: memory address of a variable
     ///Pointer referencing: assigning memory address to a pointer variable
     int a = 34;
@@ -91,4 +91,6 @@ int main() {
     cout << "a3 = " << a3 << endl;
     f3(a3);
     cout << "a3 = " << a3 << endl;
+
+    return 0;
 }

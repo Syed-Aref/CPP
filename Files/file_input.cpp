@@ -31,4 +31,6 @@ int main() {
         cout << "File failed to open" << endl;
         return 0;
     }
+
+    return 0;
 }

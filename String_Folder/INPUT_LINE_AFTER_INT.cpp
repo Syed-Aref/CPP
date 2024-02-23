@@ -1,4 +1,4 @@
-///Bismillahir Rahmanir Rahim
+/// Bismillahir Rahmanir Rahim
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,7 +20,6 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 
-
     int t = 1;
     ///cin >> t;
 
@@ -36,4 +35,5 @@ int main() {
         cout << s << endl;
     }
 
+    return 0;
 }

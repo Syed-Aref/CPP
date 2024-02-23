@@ -13,14 +13,16 @@ typedef long long int lli;
 bool sort_func1(int x, int y){ /// a1,a2
     return x > y; ///a1 > a2
 }
+
 bool sort_func2(int x, int y){ /// a1,a2
     return x < y; /// a1 < a2
 }
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     // Built-in sort function that sorts in non-decreasing order
     vector< int > v = { 23,67,56,89,67,34 };
     sort(v.begin(), v.end());
@@ -39,22 +41,23 @@ int main() {
     for (int i = 0; i < v2.size(); i++)
         cout << v2[i] << "\n";
     cout << "---------------------" << "\n";
-    
+
     /**
     Non-decreasing:
     func1(a1,a2) {
         returns a1 < a2;
     }
-    
+
     Non-increasing:
     func2(a1,a2) {
         returns a1 > a2;
     }
     **/
-    
+
     /// Built-in method for non-increasing ordered sort
-    /// greater< any_accepted_data_type >() 
+    /// greater< any_accepted_data_type >()
     sort( v2.begin() , v2.end() , greater<int>() );
-    
+
+    return 0;
 }
 

@@ -15,9 +15,11 @@ class General {
     void gen() {
         cout << "This is general" << endl;
     }
+
     void hi() {
         cout << "hi" << endl;
     }
+
     void bye() {
         cout << "bye" << endl;
     }
@@ -28,6 +30,7 @@ class General1 : public General {
     void gen1() {
         cout << "This is general1" << endl;
     }
+
     void hi() {
         cout << "hi.this is general1" << endl;
     }
@@ -47,8 +50,10 @@ int main() {
     g1.gen1();
     g1.hi();
     g1.bye();
-}   
-/**
+
+    return 0;
+}
+/** **************************************
 Output :
 This is general
 hi
@@ -56,7 +61,7 @@ bye
 This is general1
 hi.this is general1
 bye
-**/
+************************************** **/
 
 /// ---------------------------------------------------
 /// However
@@ -77,9 +82,11 @@ class General {
     void gen() {
         cout << "This is general" << endl;
     }
+
     void hi() {
         cout << "hi" << endl;
     }
+
     void bye() {
         cout << "bye" << endl;
     }
@@ -90,16 +97,17 @@ class General1 : public General {
     void gen1() {
         cout << "This is general1" << endl;
     }
+
     void hi() {
         cout << "hi.this is general1" << endl;
     }
 };
 
-int main() { 
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     vector<General*> g;
     g.push_back( new General() );
     g.push_back(new General1());
@@ -107,13 +115,15 @@ int main() {
     g[0]->hi();
     g[0]->bye();
 
-    // g[1]->gen1(); -> Error
+    /// g[1]->gen1(); -> Error
     g[1]->gen();
     g[1]->hi();
     g[1]->bye();
-    
+
+    return 0;
+
 }
-/**
+/** **************************************
 Output :
 This is general
 hi
@@ -121,29 +131,26 @@ bye
 This is general
 hi
 bye
- **/
-
-
-
+************************************** **/
 
 /// ---------------------------------------------------
-/// To sove this we have polymorphism
+/// To solve this we have polymorphism
 /// Before that we should understand reference class
-/*
+/**
     SEG : 3(From SEG : 1)
     General& and_g_1 = g;
     General& and_g_2 = g1;
     //General1& and_g1_1 = g; --> Error beacause general1 is the sub-class of super-class
     General1& and_g1_2 = g1;
-    
+
     //NOTE:
     // (*) &super_class -->  super_class  : OK
     // (*) &super_class -->  sub_class    : OK
     // (*) &sub_class -->  super_class    : WRONG
     // (*) &sub_class -->  sub_class       : OK
-*/
+**/
 
-// /Polymorphism exemples :
+/// Polymorphism exemples :
 /// Ex:1
 #include <bits/stdc++.h>
 using namespace std;
@@ -163,6 +170,7 @@ public:
     Base(string n) {
         name = n;
     }
+
     virtual void show() {
         cout << name << " In Base \n";
     }
@@ -173,6 +181,7 @@ public:
     Derived(string n) : Base(n) {
 
     }
+
     void show() {
         cout << name << " In Derived \n";
     }
@@ -182,7 +191,7 @@ int main(void) {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     Base* base = new Base("x");
 
     base->show(); //x In Base
@@ -212,24 +221,30 @@ public:
     Name(string n) {
         nm = n;
     }
+
     Name() {
         nm = "null";
     }
+
     virtual void display() {
         cout << nm << endl;
     }
 };
+
 class SmartName : public Name {
 public:
     SmartName() : Name() {
-        
+
     }
+
     SmartName(string x) : Name(x) {
-        
+
     }
+
     void input(string s) {
         nm = s;
     }
+
     void display() {
         cout << "His name is " << nm << endl;
     }
@@ -239,15 +254,17 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     SmartName snm;
-    snm.display(); //His name is null
-    snm.Name::display(); //null
+    snm.display(); ///His name is null
+    snm.Name::display(); ///null
     snm.input("Aref");
-    snm.display(); //His name is Aref
-    snm.Name::display();//Aref
+    snm.display(); ///His name is Aref
+    snm.Name::display(); ///Aref
 
     SmartName snm1("Ahmed");
-    snm1.Name::display(); //Ahmed
-    snm1.display(); //His name is Ahmed
+    snm1.Name::display(); ///Ahmed
+    snm1.display(); ///His name is Ahmed
+
+    return 0;
 }

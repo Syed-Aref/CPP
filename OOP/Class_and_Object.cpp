@@ -1,7 +1,3 @@
-
-
--------------------------------------***-------------------------------------
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,7 +15,7 @@ class Book {
         string author;
         string bookName;
         Book() {
-          cout<<"Please intitalize Author and Book-name"<<"\n";
+          cout << "Please intitalize Author and Book-name" << "\n";
         }
 };
 
@@ -27,17 +23,18 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     Book book1;
+
     return 0;
 }
 
-/*
+/** *********************************
 Inside console:
 Please intitalize Author and Book-name
-*/
+********************************* **/
 
--------------------------------------***-------------------------------------
+/// -------------------------------------***-------------------------------------
 
 
 #include <bits/stdc++.h>
@@ -61,23 +58,25 @@ class Book {
           bookName = aBookName;
         }
 };
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
-    Book book1("Mario Pujo","The godfather");
-    cout<<book1.bookName<<" is written by "<<book1.author<<endl;
+
+    Book book1("Mario Pujo", "The godfather");
+    cout << book1.bookName << " is written by " << book1.author << endl;
+
     return 0;
 }
 
-/*
+/** *********************************
 Inside console:
 The godfather is written by Mario Pujo
-*/
+********************************* **/
 
 
--------------------------------------***-------------------------------------
+/// -------------------------------------***-------------------------------------
 
 
 #include <bits/stdc++.h>
@@ -94,49 +93,61 @@ typedef long long int lli;
 
 class Book {
     private:
-        int rating;  
+        int rating;
+
     public:
         string author;
         string bookName;
-        Book(string aAuthor,string aBookName,int num) {
+
+        Book(string aAuthor, string aBookName, int num) {
           author = aAuthor;
           bookName = aBookName;
           rating = num;
         }
+
         int getRating() {
           return rating;
         }
+
         void setRating(int n) {
           rating = n;
         }
 };
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
-    Book book1("Mario Pujo","The godfather",8);
-    cout<<book1.bookName<<" is written by "<<book1.author<<endl;
-    //cout<<"Rating is: "<<book1.rating<<"\n";-->Error,can not access private field in any other class except the main body class//
-    cout<<"Rating is: "<<book1.getRating()<<"\n";
-    //Changing the information about book//
+
+    Book book1("Mario Pujo", "The godfather",8);
+    cout << book1.bookName << " is written by " << book1.author << endl;
+
+    /// cout<<"Rating is: "<<book1.rating<<"\n";-->Error,can not access private field in any other class except the main body class//
+    cout << "Rating is: " << book1.getRating() << "\n";
+
+    /// Changing the information about book//
     book1.bookName = "Lilaboti";
     book1.author = "Humayun Ahmed";
-    //book1.rating = 9;-->Error
+    /// book1.rating = 9;-->Error
     book1.setRating(9);
     cout<<"New Book"<<"\n";
     cout<<book1.bookName<<" is written by "<<book1.author<<endl;
     cout<<"Rating is: "<<book1.getRating()<<"\n";
+
     return 0;
 }
-/*Inside console:
+/** *********************************
+Inside console:
 The godfather is written by Mario Pujo
 Rating is: 8
 New Book
 Lilaboti is written by Humayun Ahmed
 Rating is: 9
-*/
--------------------------------------***-------------------------------------
+**********************************/
+
+
+/// -------------------------------------***-------------------------------------
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -150,25 +161,25 @@ typedef long long int lli;
 #define sec second
 #define line "\n"
 
-class s1 {
+class classA {
     public :
         int s;
-        s1(int s_) {
+
+        classA(int s_) {
             s = s_;
         }
-
 };
 
-class s2 {
+class classB {
     public :
         int s;
-        s2(int s_) {
+        classB(int s_) {
             s = s_;
         }
-        s2() {
+
+        classB() {
             s = -1;
         }
-
 };
 
 
@@ -177,34 +188,34 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 
+    classA a1(56);
+    classA* a_pointer = new classA(34);
 
+    vector<classA> vec_a;
+    vec_a.push_back( a1 );
+    vec_a.push_back( classA(55) );
 
-    s1 a(56);
-    s1* ap = new s1(34);
+    vector<classA*> vec_a_pointer;
+    vec_a_pointer.push_back( a_pointer );
+    vec_a_pointer.push_back( new classA(45) );
 
-    vector<s1> vecs1;
-    vecs1.push_back( a );
-    vecs1.push_back( s1(55) );
-
-    vector<s1*> vecs1p;
-    vecs1p.push_back( ap );
-    vecs1p.push_back( new s1(45) );
-
-    for(auto i : vecs1) cout << i.s << " ";
-    cout<<endl;
+    for(auto i : vec_a) cout << i.s << " ";
+    cout << endl;
     cout << "------------" << endl;
 
-    for(auto i : vecs1p) cout << i->s << " ";
-    cout<<endl;
+    for(auto i : vec_a_pointer) cout << i->s << " ";
+    cout << endl;
     cout << "------------" << endl;
 
-    s1* b1[6];
-    for(int i = 0;i<6;i++) b1[i] = new s1(i);
-    //before using b1[i] we must initialize it
+    classA* array_a_pointer[6];
+    for(int i = 0;i<6;i++) array_a_pointer[i] = new classA(i);
+    /// before using array_a_pointer[i] we must initialize it
 
-    //s1 b2[6];
+    classA array_a[6];
 
-    s2 c1[6];
-    s2* c2[6];
+    classB array_b[6];
 
+    classB* array_b_pointer[6];
+
+    return 0;
 }

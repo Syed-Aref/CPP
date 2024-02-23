@@ -23,7 +23,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     ordered_set p;
 
     p.insert(22);
@@ -31,25 +31,25 @@ int main() {
     p.insert(20);
     p.insert(22);
 
-    ///No duplicate elements
+    /// No duplicate elements
     cout << p.size() << endl;
 
     cout << "========================================" << endl;
 
-    ///find_by_order(i): i-th element in the set(logn).
+    /// find_by_order(i): i-th element in the set(logn).
     for(int i = 0;i<p.size();i++){
         cout << *( p.find_by_order(i) ) << endl;
     }
 
     cout << "========================================" << endl;
 
-    ///order_of_key(x) : Number of items strictly smaller than x(logn).
+    /// order_of_key(x) : Number of items strictly smaller than x(logn).
     cout << p.order_of_key(22) << endl;
     cout << p.order_of_key(23) << endl;
 
     cout << "========================================" << endl;
 
-    ///Clearing entire list
+    /// Clearing entire list
     p.clear();
     cout << p.size() << endl;
 

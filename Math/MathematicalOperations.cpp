@@ -1,6 +1,5 @@
 /**
 
-
 --> double is more recommended than float
 --> #include <cmath>
 --> round(num),ceil(num),floor(num) taks double(data type) input and returns integer

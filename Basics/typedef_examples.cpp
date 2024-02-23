@@ -27,4 +27,6 @@ int main() {
 
     cout << a << endl;
     cout << p1.first << " " << p1.second << endl;
+
+    return 0;
 }

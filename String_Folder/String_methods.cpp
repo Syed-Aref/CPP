@@ -23,7 +23,7 @@ vector<string> splitString(string str,char breaker) {
             s = s + x;
         }
     }
-    
+
     if(s.length() > 0)ret.push_back(s);
 
     return ret;
@@ -58,4 +58,6 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
+
+    return 0;
 }

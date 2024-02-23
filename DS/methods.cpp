@@ -20,7 +20,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    
+
     vector<int> v{11,12,34,67,89,45,23,12,45,78};
     /**
     Other ways to initialize:
@@ -46,18 +46,18 @@ int main() {
     /*** vector ***/
     ///Random access(element, O(1))
     cout << v[4] << endl;
-    
+
     ///First element(element, O(1))
     cout << v.front() << endl;
 
     ///Last element(element, O(1))
     cout << v.back() << endl;
-    
+
     ///Adding element in the end(void, O(1))
     v.push_back(22);
     for(auto ele : v) cout << ele << " ";
     cout << endl;
-    
+
     ///Removing last element(void, O(1))
     v.pop_back();
     for(auto ele : v) cout << ele << " ";
@@ -85,15 +85,15 @@ int main() {
     /*** set ***/
     ///Adding element(void, O(LOG(N)))
     s.insert(element);
-    
+
     ///Searching exsitence(void, O(log(N)))
     s.count(element); ///int; 1 if present , else 0
-    
+
     ///Finding element(iterator, O(log(N)))
     auto it = s.find(element);
     if(it == s.end()) cout << "No element" << endl;
     else cout << *it << endl;
-    
+
     ///Lower bound(iterator, LOG(N))
     auto set_lb_it = s.lower_bound(element);
     if(set_lb_it != s.end()) cout << "*set_lb_it = " << *set_lb_it << endl;
@@ -112,7 +112,7 @@ int main() {
     /*** map ***/
     ///Inserting((void, O(log(N)))
     m.insert( make_pair(int_key,string_value) );
-    
+
     ///Mapping((void, O(log(N)))
     m[key] = string_value;
 
@@ -121,13 +121,13 @@ int main() {
 
     ///Findig(iterator, O(log(N)))
     m.find(key);
-    
+
     ///Erasing element(void, O(log(N)))
     m.erase(any_key_value);
     ///[any key value(int,char or others based on the set) , that may present or not present in that map) can be given in parameter]
     cout << "======================" << endl;
     for(auto p : m) cout << "(" << p.first << ", " << p.second << ")" << endl;
-    
+
     ///Lower bound(iterator, LOG(N))
     auto map_lb_it = m.lower_bound(key);
     if(map_lb_it!=m.end()) cout << "(" << (*map_lb_it).first << " , " << (*map_lb_it).second << ")" << endl;
@@ -145,23 +145,23 @@ int main() {
     list<int> l = {1,44,1,3,10};
     for(auto i : l) cout << i << " ";
     cout << endl;
-    
+
     ///First element(element, O(1))
     cout << l.front() << endl;
-    
+
     ///Last element(element, O(1))
     cout << l.back() << endl;
-    
+
     ///Adding element in the begining(void, O(1))
     l.push_front(element);
     for(auto i : l) cout << i << " ";
     cout << endl;
-    
+
     ///Removing first element(void, O(1))
     l.pop_front();
     for(auto i : l) cout << i << " ";
     cout << endl;
-    
+
     ///Adding element in the end(void, O(1))
     l.push_back(element);
     for(auto ele : l) cout << ele << " ";
@@ -171,7 +171,7 @@ int main() {
     l.pop_back();
     for(auto ele : l) cout << ele << " ";
     cout << endl;
-    
+
     /**Stack**/
     stack<int> stk;
 
@@ -213,4 +213,5 @@ int main() {
     }
     cout << endl;
 
+    return 0;
 }

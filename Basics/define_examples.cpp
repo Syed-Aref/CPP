@@ -60,4 +60,6 @@ int main() {
     }
 
     cout << AREA(5,6) << endl;
+
+    return 0;
 }

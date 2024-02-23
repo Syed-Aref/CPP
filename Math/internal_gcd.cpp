@@ -15,4 +15,6 @@ int main() {
     cin.tie(NULL);cout.tie(NULL);
 
     cout << __gcd(20,24) << endl;
+
+    return 0;
 }
